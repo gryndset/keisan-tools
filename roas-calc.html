@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROAS計算ツール | 広告費用対効果を無料で即計算 | 計算ツール集</title>
+<meta name="description" content="ROAS（広告費用対効果）を無料で即計算。ROAS＝売上÷広告費×100。損益分岐点ROAS自動算出。10業界の平均値比較・目標ROAS達成シミュレーション付き。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourdomain.com/roas">
+<meta property="og:title" content="ROAS計算ツール | 広告費用対効果を無料で即計算">
+<meta property="og:description" content="ROASを無料で即計算。10業界の平均比較・目標ROAS達成シミュレーション・改善アドバイス付き。マーケター向け無料Webツール。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/roas">
+<meta property="og:image" content="https://yourdomain.com/ogp-roas.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ROAS計算ツール | 広告費用対効果を無料で即計算">
+<meta name="twitter:description" content="ROASを無料で即計算。10業界の平均比較・目標ROAS達成シミュレーション・改善アドバイス付き。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "計算ツール集",
+      "item": "https://yourdomain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ROAS計算ツール",
+      "item": "https://yourdomain.com/roas"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ROAS計算ツール",
+  "url": "https://yourdomain.com/roas",
+  "description": "ROAS（広告費用対効果）を無料で計算できるWebツール。10業界の平均値との比較・目標ROAS達成シミュレーション・改善アドバイス付き。",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "dateModified": "2026-03-15"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "ROASとは何ですか？", "acceptedAnswer": { "@type": "Answer", "text": "ROAS（Return On Ad Spend）とは広告費用対効果のことで、広告費に対してどれだけの売上が得られたかを示す指標です。ROAS（%）= 売上 ÷ 広告費 × 100 で計算します。" } },
+    { "@type": "Question", "name": "ROASの計算式は？", "acceptedAnswer": { "@type": "Answer", "text": "ROAS（%）= 広告経由売上（円）÷ 広告費（円）× 100 です。例えば広告費10万円で売上40万円の場合、ROASは400%になります。" } },
+    { "@type": "Question", "name": "ROASとROIの違いは？", "acceptedAnswer": { "@type": "Answer", "text": "ROASは売上ベースの指標（原価を考慮しない）、ROIは純利益ベースの指標（原価・コストを引いた利益で計算）です。ROASが高くても原価が高ければ実際には赤字になる場合があるため、収益性の正確な判断にはROIも必要です。" } },
+    { "@type": "Question", "name": "目標ROASはどう設定しますか？", "acceptedAnswer": { "@type": "Answer", "text": "目標ROAS = 1 ÷ 粗利率 × 100 で計算します。粗利率30%なら目標ROAS = 333%（損益分岐点）、利益を出すにはこれ以上のROASが必要です。Google広告の目標ROAS入札に設定すると機械学習が自動最適化します。" } },
+    { "@type": "Question", "name": "良いROASの目安は何%ですか？", "acceptedAnswer": { "@type": "Answer", "text": "業界・粗利率によって異なりますが、EC・通販では300〜500%、美容・ヘルスでは400〜700%が目安とされます。損益分岐点ROASは「100 ÷ 粗利率」で計算でき、これを上回ることが最低条件です。" } },
+    { "@type": "Question", "name": "ROASを上げるにはどうすればよいですか？", "acceptedAnswer": { "@type": "Answer", "text": "ROASを上げる主な施策は①クリエイティブのA/Bテストでクリック率を上げる②ランディングページのCVRを改善する③購買意図の高いキーワード・ターゲットに予算を集中する④リターゲティング広告を活用する、の4つです。" } },
+    { "@type": "Question", "name": "Google広告の目標ROAS入札とは？", "acceptedAnswer": { "@type": "Answer", "text": "目標ROAS入札はGoogle広告の自動入札戦略で、設定した目標ROASに近づくようGoogleの機械学習が入札額を自動調整します。十分なコンバージョンデータ（目安：月50件以上）が蓄積された後に設定すると効果的です。" } },
+    { "@type": "Question", "name": "このROAS計算ツールは無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、完全無料で使えます。登録不要でご利用いただけます。入力したデータはサーバーに送信されず、すべてブラウザ内で計算します。" } }
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif; background: #f4f5f7; min-height: 100vh; padding: 0 0 80px; font-size: 16px; line-height: 1.6; color: #111; }
+
+  .rs-nav { background: #fff; border-bottom: 1px solid #e0ede8; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+  .rs-nav-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; scrollbar-width: none; }
+  .rs-nav-inner::-webkit-scrollbar { display: none; }
+  .rs-nav-logo { font-size: 13px; font-weight: 800; color: #1a8a3b; text-decoration: none; white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
+  .rs-nav-link { display: flex; align-items: center; height: 48px; padding: 0 14px; font-size: 12px; font-weight: 600; color: #888; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
+  .rs-nav-link:hover { color: #1a8a3b; }
+  .rs-nav-link.rs-current { color: #1a8a3b; border-bottom-color: #1a8a3b; }
+  .rs-nav-link.rs-disabled { color: #ccc; cursor: default; }
+  .rs-badge { font-size: 9px; font-weight: 700; background: #eee; color: #bbb; padding: 1px 5px; border-radius: 4px; margin-left: 4px; }
+
+  .rs-wrap { width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 16px 0; }
+  .rs-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #1a8a3b; margin-bottom: 8px; }
+  .rs-title { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 6px; line-height: 1.3; }
+  .rs-desc { font-size: 13px; color: #777; margin-bottom: 10px; line-height: 1.6; }
+  .rs-secure { display: inline-flex; align-items: center; gap: 6px; background: #f0fff4; border: 1px solid #a3e6c0; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #1a8a3b; font-weight: 600; margin-bottom: 24px; }
+
+  /* 結果カード */
+  .rs-result { background: #1a1a2e; border-radius: 20px; padding: 28px 24px; text-align: center; margin-bottom: 20px; transition: background 0.4s; position: relative; overflow: hidden; }
+  .rs-result::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; border-radius:50%; background:rgba(255,255,255,0.03); pointer-events:none; }
+  .rs-result.rs-on  { background: linear-gradient(135deg, #1a8a3b 0%, #0d6b2e 100%); }
+  .rs-result.rs-low { background: linear-gradient(135deg, #e17055 0%, #c0392b 100%); }
+  .rs-result.rs-warn { background: linear-gradient(135deg, #f39c12 0%, #d68910 100%); }
+  .rs-eyebrow2 { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+  .rs-num-row { display: flex; align-items: flex-end; justify-content: center; gap: 4px; line-height: 1; margin-bottom: 8px; }
+  .rs-num { font-size: 64px; font-weight: 800; color: #fff; letter-spacing: -2px; }
+  .rs-pct { font-size: 26px; font-weight: 700; color: rgba(255,255,255,0.6); padding-bottom: 6px; }
+  .rs-empty { font-size: 15px; color: rgba(255,255,255,0.2); padding: 20px 0; }
+  .rs-gauge-wrap { margin-top: 14px; }
+  .rs-gauge-track { background: rgba(255,255,255,0.12); border-radius: 99px; height: 3px; overflow: hidden; margin-bottom: 9px; }
+  .rs-gauge-fill { height: 100%; border-radius: 99px; background: rgba(255,255,255,0.8); transition: width 0.5s cubic-bezier(0.4,0,0.2,1); width: 0%; }
+  .rs-gauge-labels { font-size: 10px; color: rgba(255,255,255,0.3); display: flex; justify-content: space-between; margin-bottom: 10px; }
+  .rs-verdict { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .rs-verdict-sub { font-size: 11px; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .rs-formula { margin-top: 12px; font-size: 11px; color: rgba(255,255,255,0.25); font-family: monospace; }
+  .rs-actions { display: flex; gap: 7px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+  .rs-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 500; padding: 9px 14px; cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; min-height: 44px; display: flex; align-items: center; gap: 5px; -webkit-tap-highlight-color: transparent; }
+  .rs-btn:hover { background: rgba(255,255,255,0.18); }
+  .rs-btn.rs-done { background: rgba(255,255,255,0.22); color: #fff; }
+  .rs-btn.rs-dark { background: rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.12); }
+
+  /* 損益分岐点チップ */
+  .rs-bep-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .rs-bep-chip { background: rgba(255,255,255,0.12); border-radius: 10px; padding: 10px 16px; text-align: center; flex: 1; min-width: 120px; }
+  .rs-bep-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-bottom: 4px; }
+  .rs-bep-val { font-size: 18px; font-weight: 800; color: #fff; }
+
+  /* パネル */
+  .rs-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .rs-panel-title { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 0.04em; margin-bottom: 16px; }
+
+  /* スライダー */
+  .rs-sblock { margin-bottom: 22px; }
+  .rs-sblock:last-child { margin-bottom: 0; }
+  .rs-shead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .rs-sname { font-size: 14px; font-weight: 700; color: #222; display: flex; align-items: center; gap: 6px; }
+  .rs-shelp { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; margin: -8px 0; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
+  .rs-shelp-dot { width: 20px; height: 20px; border-radius: 50%; background: #eee; color: #888; font-size: 10px; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: background 0.15s, color 0.15s; }
+  .rs-shelp.rs-help-on .rs-shelp-dot { background: #1a8a3b; color: #fff; }
+  .rs-sval-wrap { display: flex; align-items: baseline; gap: 4px; }
+  .rs-sval { font-size: 28px; font-weight: 800; color: #1a8a3b; line-height: 1; }
+  .rs-sunit { font-size: 13px; font-weight: 600; color: #aaa; }
+  .rs-help-box { font-size: 12px; color: #555; background: #f0fff4; border-left: 3px solid #1a8a3b; border-radius: 0 6px 6px 0; padding: 8px 12px; margin-bottom: 10px; line-height: 1.7; display: none; }
+  .rs-help-box.rs-help-show { display: block; }
+  .rs-slider { width: 100%; -webkit-appearance: none; appearance: none; height: 6px; border-radius: 99px; background: #e8f5ee; outline: none; cursor: pointer; margin-bottom: 6px; }
+  .rs-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #1a8a3b; cursor: pointer; box-shadow: 0 2px 8px rgba(26,138,59,0.35); transition: transform 0.1s; }
+  .rs-slider::-webkit-slider-thumb:active { transform: scale(1.2); }
+  .rs-slider::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: #1a8a3b; cursor: pointer; border: none; }
+  .rs-minmax { display: flex; justify-content: space-between; font-size: 11px; color: #ccc; }
+  .rs-direct { width: 100%; border: 1.5px solid #e0ede8; border-radius: 8px; padding: 10px 14px; font-size: 18px; font-weight: 700; color: #111; outline: none; transition: border-color 0.15s; margin-top: 8px; -webkit-appearance: none; background: #fff; }
+  .rs-direct::-webkit-inner-spin-button, .rs-direct::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .rs-direct:focus { border-color: #1a8a3b; }
+  .rs-opt-block { background: #f8faf9; border-radius: 12px; padding: 16px 18px; }
+  .rs-opt-title { font-size: 11px; font-weight: 700; color: #999; letter-spacing: 0.04em; margin-bottom: 12px; }
+
+  /* シミュレーション */
+  .rs-sim { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; display: none; }
+  .rs-sim.rs-sim-on { display: block; }
+  .rs-sim-title { font-size: 12px; font-weight: 700; color: #777; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .rs-sim-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rs-sim-input { flex: 1; border: 1.5px solid #e0ede8; border-radius: 8px; padding: 10px 12px; font-size: 16px; font-weight: 600; color: #111; outline: none; transition: border-color 0.15s; min-height: 44px; -webkit-appearance: none; background: #fff; }
+  .rs-sim-input::-webkit-inner-spin-button, .rs-sim-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .rs-sim-input:focus { border-color: #1a8a3b; }
+  .rs-sim-unit { font-size: 13px; color: #aaa; flex-shrink: 0; white-space: nowrap; }
+  .rs-sim-out { background: #f8f8f8; border-radius: 10px; padding: 14px 16px; display: none; }
+  .rs-sim-out.rs-sim-out-on { display: block; }
+  .rs-sim-main { font-size: 18px; font-weight: 800; color: #111; margin-bottom: 4px; line-height: 1.3; }
+  .rs-sim-sub { font-size: 12px; color: #888; line-height: 1.5; }
+  .rs-sim-tag { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+  .rs-sim-tag.rs-need { background: #fff0f0; color: #d93025; }
+  .rs-sim-tag.rs-ok   { background: #f0fff4; color: #1a8a3b; }
+
+  /* 業界 */
+  .rs-sector-note { font-size: 12px; color: #aaa; margin-bottom: 10px; }
+  .rs-sector-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+  .rs-sector-btn { border: 1.5px solid #e0ede8; border-radius: 10px; padding: 12px 10px; font-size: 12px; font-weight: 500; color: #555; background: #fff; cursor: pointer; text-align: center; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; -webkit-tap-highlight-color: transparent; line-height: 1.3; min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
+  .rs-sector-btn:active { transform: scale(0.97); }
+  .rs-sector-btn.rs-sec-on { border-color: #1a8a3b; color: #1a8a3b; background: #f0fff4; font-weight: 700; }
+  .rs-sec-sub { font-size: 10px; color: #bbb; font-weight: 400; }
+  .rs-sector-btn.rs-sec-on .rs-sec-sub { color: #7ecf9a; }
+
+  /* CTA */
+  .rs-cta { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; display: none; border: 1.5px solid #e0ede8; }
+  .rs-cta.rs-cta-on { display: block; }
+  .rs-cta-hd { font-size: 11px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .rs-cta-item { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid #f2f2f2; }
+  .rs-cta-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .rs-cta-ico { width: 40px; height: 40px; border-radius: 10px; background: #f0fff4; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .rs-cta-body { flex: 1; min-width: 0; }
+  .rs-cta-name { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .rs-cta-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
+  .rs-cta-link { display: inline-flex; align-items: center; gap: 4px; background: #1a8a3b; color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-decoration: none; transition: background 0.15s; min-height: 36px; }
+  .rs-cta-link:hover { background: #156d2f; }
+  .rs-cta-link.rs-alt { background: #4f7fff; }
+  .rs-cta-link.rs-alt:hover { background: #3a6aee; }
+  .rs-cta-foot { font-size: 10px; color: #ccc; margin-top: 10px; text-align: center; }
+
+  /* 内訳 */
+  .rs-bd { background: #fff; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; display: none; }
+  .rs-bd.rs-bd-on { display: block; }
+  .rs-bd-title { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .rs-bd-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #f2f2f2; }
+  .rs-bd-row:last-child { border-bottom: none; }
+  .rs-bd-key { font-size: 13px; color: #888; }
+  .rs-bd-val { font-size: 13px; font-weight: 700; color: #111; }
+  .rs-bd-val.rs-accent { color: #1a8a3b; }
+
+  /* tips */
+  .rs-tips { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; display: none; }
+  .rs-tips.rs-tips-on { display: block; }
+  .rs-tips-hd { font-size: 12px; font-weight: 700; color: #777; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .rs-tip-row { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f2f2f2; font-size: 13px; line-height: 1.65; color: #444; }
+  .rs-tip-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .rs-tip-ic { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+
+  /* 記事 */
+  .rs-article { background: #fff; border-radius: 14px; padding: 28px; margin-top: 8px; }
+  .rs-article h2 { font-size: 18px; font-weight: 700; color: #111; margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; line-height: 1.4; }
+  .rs-article h2:first-of-type { margin-top: 0; }
+  .rs-article h3 { font-size: 15px; font-weight: 700; color: #333; margin: 20px 0 8px; }
+  .rs-article p { font-size: 14px; color: #444; line-height: 1.9; margin-bottom: 14px; }
+  .rs-article p:last-child { margin-bottom: 0; }
+  .rs-article ul { font-size: 14px; color: #444; padding-left: 20px; margin-bottom: 14px; line-height: 1.9; }
+  .rs-article ul li { margin-bottom: 4px; }
+  .rs-hl { background: #f0fff4; border-left: 3px solid #1a8a3b; border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #333; line-height: 1.8; }
+  .rs-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0; }
+  .rs-table th { background: #f4f4f2; padding: 10px 12px; text-align: left; font-weight: 700; color: #555; border-bottom: 2px solid #e8e8e8; }
+  .rs-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #444; line-height: 1.6; }
+  .rs-table tr:last-child td { border-bottom: none; }
+  .rs-related { margin-top: 24px; padding-top: 20px; border-top: 2px solid #f0f0f0; }
+  .rs-related-label { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .rs-related-list { display: flex; flex-direction: column; gap: 8px; }
+  .rs-related-link { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #f8f8f8; border-radius: 10px; text-decoration: none; color: #333; font-size: 13px; font-weight: 600; transition: background 0.15s; }
+  .rs-related-link:hover { background: #f0fff4; color: #1a8a3b; }
+  .rs-related-icon { font-size: 16px; flex-shrink: 0; }
+  .rs-related-body { flex: 1; }
+  .rs-related-sub { font-size: 11px; color: #aaa; font-weight: 400; margin-top: 1px; }
+  .rs-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e0ede8; text-align: center; }
+  .rs-footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
+  .rs-footer-links a { font-size: 12px; color: #999; text-decoration: none; }
+  .rs-footer-links a:hover { color: #1a8a3b; }
+  .rs-footer-copy { font-size: 11px; color: #bbb; }
+  .rs-note { font-size: 11px; color: #bbb; text-align: center; line-height: 1.7; margin-top: 14px; }
+  @media (max-width: 600px) { .rs-title { font-size: 22px; } .rs-num { font-size: 52px; } .rs-article { padding: 20px 16px; } }
+
+
+  .rs-direct::placeholder { color: #aaa; }
+  /* ===== 印刷・PDF保存用スタイル ===== */
+  @media print {
+    .rs-nav,
+    footer,
+    .rs-cta {
+      display: none !important;
+    }
+    .rs-result {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: none !important;
+      border: 1px solid #ccc !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .rs-result * {
+      color: #111 !important;
+    }
+    body {
+      background: #fff !important;
+    }
+    .rs-wrap {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  /* スマホのタップ後hover残りバグ防止 */
+  @media (hover: none) {
+    a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
+  }
+</style>
+<!-- Google Analytics（GA4） ※リリース後にIDを設定 -->
+<!-- 設定方法: G-XXXXXXXXXX をご自身の測定IDに書き換えてコメントを外す -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:site_name" content="計算ツール集">
+<!-- Google AdSense（審査通過後にコメントを外してIDを設定）-->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+<!--
+このページはROAS（広告費用対効果）を無料で計算できるツールです。
+広告費と売上を入力するだけでROASを即算出。
+10業界の平均値との比較・目標ROAS達成シミュレーション・改善アドバイス付き。
+計算式：ROAS（%）= 売上 ÷ 広告費 × 100
+Google広告・Meta広告・リスティング広告運用者向け。
+登録不要・完全無料。入力データはサーバーに送信されません。
+最終更新：2026年3月。継続運営中。
+-->
+<nav class="rs-nav">
+  <div class="rs-nav-inner">
+    <a class="rs-nav-logo" href="/">📊 計算ツール集</a>
+    <a class="rs-nav-link" href="/cvr">CVR</a>
+    <a class="rs-nav-link" href="/cpa">CPA</a>
+    <a class="rs-nav-link" href="/roi">ROI</a>
+    <a class="rs-nav-link" href="/ltv">LTV</a>
+    <a class="rs-nav-link rs-current" href="/roas">ROAS</a>
+    <a class="rs-nav-link" href="/ctr">CTR</a>
+    <a class="rs-nav-link" href="/bep">損益分岐点</a>
+    <a class="rs-nav-link" href="/tedori">手取り</a>
+    <a class="rs-nav-link" href="/loan">ローン</a>
+    <a class="rs-nav-link" href="/bmi">BMI</a>
+  </div>
+</nav>
+
+<div class="rs-wrap">
+  <div class="rs-eyebrow">無料ツール</div>
+  <h1 class="rs-title">ROAS計算ツール</h1>
+  <p class="rs-desc">スライダーを動かすだけでROAS（広告費用対効果）を即計算。損益分岐点ROAS・目標達成シミュレーション・業界平均比較が無料で使えます。</p>
+  <div class="rs-secure">
+    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5L2 5V9C2 11.2 4.3 13 7 13C9.7 13 12 11.2 12 9V5L7 1.5Z" stroke="#1a8a3b" stroke-width="1.2" fill="none"/><path d="M5 7L6.5 8.5L9 6" stroke="#1a8a3b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    入力したデータはサーバーに送信されません。すべてブラウザ内で計算します。
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-bottom:16px;">※ 当サイトは<a href="/privacy" style="color:#aaa;">アフィリエイト広告</a>を含む場合があります。</p>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <div class="rs-result" id="rsCard">
+    <div class="rs-eyebrow2">ROAS（広告費用対効果）</div>
+    <div id="rsInner"><div class="rs-empty">スライダーを動かしてください</div></div>
+    <div class="rs-bep-row" id="rsBepRow" style="display:none;"></div>
+    <div class="rs-gauge-wrap" id="rsGauge" style="display:none;">
+      <div class="rs-gauge-track"><div class="rs-gauge-fill" id="rsGaugeFill"></div></div>
+      <div class="rs-gauge-labels"><span>低い</span><span id="rsGaugeAvg">平均</span><span id="rsGaugeMax">高水準</span></div>
+    </div>
+    <div class="rs-verdict" id="rsVerdict" style="display:none;"></div>
+    <div class="rs-verdict-sub" id="rsVerdictSub" style="display:none;"></div>
+    <div class="rs-formula" id="rsFormula" style="display:none;">ROAS = 売上 ÷ 広告費 × 100</div>
+    <div class="rs-actions" id="rsActions" style="display:none;">
+      <button type="button" class="rs-btn" id="rsCopyBtn" onclick="doRsCopy()">結果をコピー</button>
+      <button type="button" class="rs-btn rs-dark" onclick="doRsShare()">𝕏 でシェア</button>
+      <button type="button" class="rs-btn" onclick="doRsReset()">やり直す</button>
+    </div>
+  </div>
+
+  <!-- 入力 -->
+  <div class="rs-panel">
+    <div class="rs-panel-title">広告費と売上を入力</div>
+    <div class="rs-sblock">
+      <div class="rs-shead">
+        <label class="rs-sname" for="dCost">広告費<span class="rs-shelp" id="hBtnCost" role="button"><span class="rs-shelp-dot">?</span></span></span>
+        <div class="rs-sval-wrap"><span class="rs-sval" id="vCost">100,000</span><span class="rs-sunit">円</span></div>
+      </div>
+      <div class="rs-help-box" id="hBoxCost">計測期間中にかかった広告費の合計。Google広告・Meta広告など媒体の管理画面で確認できます。</div>
+      <input type="range" class="rs-slider" id="sCost" min="1000" max="10000000" step="1000" value="100000">
+      <div class="rs-minmax"><span>1,000円</span><span>1,000万円</span></div>
+      <input type="text" class="rs-direct" id="dCost" placeholder="直接入力も可（例：100000）" inputmode="numeric" min="0">
+    </div>
+    <div class="rs-sblock">
+      <div class="rs-shead">
+        <label class="rs-sname" for="dRev">広告経由売上<span class="rs-shelp" id="hBtnRev" role="button"><span class="rs-shelp-dot">?</span></span></span>
+        <div class="rs-sval-wrap"><span class="rs-sval" id="vRev">400,000</span><span class="rs-sunit">円</span></div>
+      </div>
+      <div class="rs-help-box" id="hBoxRev">広告経由で発生した売上の合計。Google広告のコンバージョン値やGA4のeコマース売上で確認できます。</div>
+      <input type="range" class="rs-slider" id="sRev" min="1000" max="50000000" step="1000" value="400000">
+      <div class="rs-minmax"><span>1,000円</span><span>5,000万円</span></div>
+      <input type="text" class="rs-direct" id="dRev" placeholder="直接入力も可（例：400000）" inputmode="numeric" min="0">
+    </div>
+  </div>
+
+  <div class="rs-panel">
+    <div class="rs-panel-title">粗利率（任意）</div>
+    <div class="rs-opt-block">
+      <div class="rs-opt-title">入力すると損益分岐点ROASと利益額を表示します</div>
+      <div class="rs-sblock" style="margin-bottom:0;">
+        <div class="rs-shead">
+          <span class="rs-sname">粗利率</span>
+          <div class="rs-sval-wrap"><span class="rs-sval" id="vMargin">30</span><span class="rs-sunit">%</span></div>
+        </div>
+        <input type="range" class="rs-slider" id="sMargin" min="1" max="100" step="1" value="30">
+        <div class="rs-minmax"><span>1%</span><span>100%</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- シミュレーション -->
+  <div class="rs-sim" id="rsSim">
+    <div class="rs-sim-title">💡 目標ROAS達成シミュレーション</div>
+    <div class="rs-sim-row">
+      <input type="text" class="rs-sim-input" id="rsSimTarget" placeholder="500" inputmode="numeric" min="0">
+      <span class="rs-sim-unit">% のROASを達成するには</span>
+    </div>
+    <div class="rs-sim-out" id="rsSimOut">
+      <div class="rs-sim-main" id="rsSimMain"></div>
+      <div class="rs-sim-sub" id="rsSimSub"></div>
+      <span class="rs-sim-tag" id="rsSimTag"></span>
+    </div>
+  </div>
+
+  <div class="rs-panel">
+    <div class="rs-panel-title">業界を選択（任意）</div>
+    <div class="rs-sector-note">選ぶと業界平均・改善アドバイスが変わります</div>
+    <div class="rs-sector-grid" id="rsSectorGrid"></div>
+  </div>
+
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <div class="rs-cta" id="rsCta"><div class="rs-cta-hd">PR・おすすめサービス</div><div id="rsCtaList"></div><p class="rs-cta-foot">※ 当サイトはアフィリエイト広告を含む場合があります</p></div>
+
+  <div class="rs-bd" id="rsBd">
+    <div class="rs-bd-title">内訳</div>
+    <div class="rs-bd-row"><span class="rs-bd-key">広告費</span><span class="rs-bd-val" id="bdCost">—</span></div>
+    <div class="rs-bd-row"><span class="rs-bd-key">広告経由売上</span><span class="rs-bd-val" id="bdRev">—</span></div>
+    <div class="rs-bd-row"><span class="rs-bd-key">ROAS</span><span class="rs-bd-val rs-accent" id="bdRoas">—</span></div>
+    <div class="rs-bd-row"><span class="rs-bd-key">粗利額（概算）</span><span class="rs-bd-val" id="roasBdProfit">—</span></div>
+    <div class="rs-bd-row"><span class="rs-bd-key">損益分岐点ROAS</span><span class="rs-bd-val" id="roasBdBep">—</span></div>
+    <div class="rs-bd-row"><span class="rs-bd-key">業界平均（<span id="roasBdSector">—</span>）</span><span class="rs-bd-val" id="roasBdAvg">—</span></div>
+  </div>
+
+  <div class="rs-tips" id="rsTips">
+    <div class="rs-tips-hd">📈 <span id="rsTipsSec"></span>のROAS改善ポイント</div>
+    <div id="rsTipsList"></div>
+  </div>
+
+  <div class="rs-note">※業界平均は参考値です。業種・媒体・施策により大きく異なります。</div>
+
+  <div class="rs-article">
+    <div style="font-size:11px;color:#bbb;margin-bottom:20px;">最終更新：2026年3月</div>
+    <h2>ROAS（広告費用対効果）とは何ですか？</h2>
+    <p>ROAS（Return On Ad Spend）とは、広告費に対してどれだけの売上が得られたかを示す指標です。日本語では「広告費用対効果」と呼ばれます。</p>
+    <p>計算式は<strong>ROAS（%）= 広告経由売上 ÷ 広告費 × 100</strong>です。たとえば広告費10万円で売上40万円なら ROAS = 400,000 ÷ 100,000 × 100 = 400%になります。</p>
+    <div class="rs-hl">✅ ROASの計算式：ROAS（%）= 広告経由売上（円）÷ 広告費（円）× 100<br>例）売上400,000円 ÷ 広告費100,000円 × 100 ＝ ROAS 400%</div>
+    <h2>損益分岐点ROASの計算方法</h2>
+    <p>損益分岐点ROAS（最低限必要なROAS）は粗利率から逆算できます。</p>
+    <div class="rs-hl">損益分岐点ROAS = 100 ÷ 粗利率（%）× 100<br>例）粗利率30%なら損益分岐点ROAS = 100 ÷ 30 × 100 = 333%</div>
+    <p>ROASが損益分岐点を下回ると広告を出せば出すほど赤字になります。Google広告の目標ROAS入札に設定する数値は、損益分岐点ROASより高い値を設定してください。</p>
+    <h2>ROASとROIの違いは？</h2>
+    <p>ROASは売上ベースの指標で原価を考慮しません。ROIは純利益ベース（売上−広告費−原価）で計算します。ROASが400%でも粗利率が20%なら実際のROIはマイナスになります。広告の収益性を正確に判断するにはROIも合わせて確認することが重要です。</p>
+    <h2>業界別のROAS平均値</h2>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="rs-table">
+      <tr><th>業界</th><th>ROAS平均の目安</th><th>損益分岐点（粗利率目安）</th></tr>
+      <tr><td>EC・通販</td><td>300〜500%</td><td>約333%（粗利率30%の場合）</td></tr>
+      <tr><td>美容・ヘルス</td><td>400〜700%</td><td>約250%（粗利率40%の場合）</td></tr>
+      <tr><td>転職・人材</td><td>300〜600%</td><td>約200%（粗利率50%の場合）</td></tr>
+      <tr><td>教育・スクール</td><td>300〜600%</td><td>約250%（粗利率40%の場合）</td></tr>
+      <tr><td>医療・クリニック</td><td>400〜800%</td><td>約200%（粗利率50%の場合）</td></tr>
+      <tr><td>BtoB・SaaS</td><td>300〜600%</td><td>約143%（粗利率70%の場合）</td></tr>
+      <tr><td>飲食・デリバリー</td><td>200〜400%</td><td>約500%（粗利率20%の場合）</td></tr>
+      <tr><td>アプリ・ゲーム</td><td>300〜600%</td><td>約167%（粗利率60%の場合）</td></tr>
+      <tr><td>不動産・住宅</td><td>300〜600%</td><td>約333%（粗利率30%の場合）</td></tr>
+      <tr><td>金融・保険</td><td>300〜600%</td><td>約200%（粗利率50%の場合）</td></tr>
+    </table></div>
+    <h2>ROASを上げる4つの方法</h2>
+    <h3>① クリエイティブのA/Bテストでクリック率を上げる</h3>
+    <p>広告のCTR（クリック率）が上がるとCPC（クリック単価）が下がり、同じ予算でより多くのクリックが得られROASが改善します。週1本ペースで新しいクリエイティブをテストし続けることが重要です。</p>
+    <h3>② ランディングページのCVRを改善する</h3>
+    <p>CVRが上がると同じ広告費でCV数・売上が増えROASが改善します。ヒートマップツールでLPの離脱箇所を特定してから改善するのが効率的です。</p>
+    <h3>③ 購買意図の高いターゲットに予算を集中する</h3>
+    <p>「商品名＋購入」「ブランド名」などの購買意図の高いキーワードに予算を集中させることでCVRが上がりROASが改善します。ROASの低いキャンペーンの予算を削って高ROASのキャンペーンに移すのが基本施策です。</p>
+    <h3>④ リターゲティング広告を活用する</h3>
+    <p>一度サイトを訪れたユーザーへの再訴求はCVRが高くROASが新規ユーザーの2〜3倍になるケースが多いです。Googleのリマーケティングリスト・MetaのカスタムオーディエンスでROASを大幅改善できます。</p>
+    <div class="rs-related">
+      <div class="rs-related-label">関連ツール</div>
+      <div class="rs-related-list">
+        <a class="rs-related-link" href="/cpa"><span class="rs-related-icon">💰</span><div class="rs-related-body"><div>CPA計算ツール</div><div class="rs-related-sub">顧客獲得単価を即計算。ROASと合わせて広告効率を把握。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="rs-related-link" href="/roi"><span class="rs-related-icon">📈</span><div class="rs-related-body"><div>ROI計算ツール</div><div class="rs-related-sub">原価を含めた純利益ベースの投資対効果を計算。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="rs-related-link" href="/ltv"><span class="rs-related-icon">🔄</span><div class="rs-related-body"><div>LTV計算ツール</div><div class="rs-related-sub">顧客生涯価値からROASの目標値を逆算できます。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  <!--
+  ===== リリース前チェックリスト =====
+  □ og:url / og:image を実際のドメインに変更
+  □ WebApplicationスキーマの"url"を変更
+  □ SECTORS配列内の url:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */ を実際のアフィリエイトURLに変更
+  □ AdSenseのコメントを外してIDを変更（審査通過後）
+  ======================================
+  -->
+  <footer class="rs-footer">
+    <div class="rs-footer-links"><a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><a href="/privacy">プライバシーポリシー</a></div>
+    <div class="rs-footer-copy">© 2026 計算ツール集</div>
+  </footer>
+</div>
+
+<script>
+const SECTORS = [
+  { name:'EC・通販',        range:'平均 300〜500%', avg:400,  max:800,
+    tips:[{i:'🛒',t:'リターゲティング広告を強化する。カート放棄・閲覧履歴に基づく広告はROASが新規の2〜3倍になるケースが多い。'},{i:'📸',t:'商品画像・動画のA/Bテストを繰り返す。クリエイティブの差がCTR・CVRに直結しROASを大きく左右する。'},{i:'🎯',t:'高AOV（平均注文金額）の商品に予算を集中させる。同じCV数でも単価が上がるとROASが大幅改善する。'}],
+    ctaH:[{i:'📊',n:'ヒートマップでLP改善',d:'Microsoft Clarityは無料でLP改善の第一歩に。CVRを上げてROASを改善。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で始める',c:''}],
+    ctaL:[{i:'📈',n:'予算をスケールさせる',d:'ROASが高水準なら予算を増やして売上を最大化するタイミング。目標ROAS入札が効果的。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'美容・ヘルス',    range:'平均 400〜700%', avg:550,  max:1000,
+    tips:[{i:'📷',t:'ビフォーアフター動画広告でCTRを上げる。美容系は動画クリエイティブがROAS改善に最も効果的。'},{i:'🎁',t:'定期購入・まとめ買いオファーを広告クリエイティブに入れる。AOVが上がりROASが大幅改善する。'},{i:'💬',t:'口コミ・UGCを広告に活用する。第三者の声は信頼度を上げCVRを改善しROASが向上する。'}],
+    ctaH:[{i:'📊',n:'クリエイティブA/Bテストツール',d:'広告クリエイティブのパフォーマンスを可視化。高ROASクリエイティブを素早く特定。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す',c:''}],
+    ctaL:[{i:'📈',n:'定期購入でLTVを上げる',d:'ROASが高水準なら次はリピーター育成。LTVを上げてより高い獲得コストを許容できる体制に。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'転職・人材',      range:'平均 300〜600%', avg:450,  max:900,
+    tips:[{i:'🎯',t:'高年収・専門職ターゲットに絞る。CVの単価が高い層に予算を集中させるとROASが大幅改善する。'},{i:'✍️',t:'広告文に給与水準・働き方などの具体的数値を入れる。CTRが上がりCPCが下がりROASが改善する。'},{i:'📧',t:'登録後のメールナーチャリングを強化する。登録から最終CVまでの転換率を上げるとROASが改善する。'}],
+    ctaH:[{i:'📝',n:'EFOで登録完了率を上げる',d:'フォームの離脱を防ぐEFOツール。CVR改善がROAS直結の最短施策。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す',c:''}],
+    ctaL:[{i:'📈',n:'予算をスケールさせる',d:'ROASが目標以内なら予算増加でスケール。自動入札で効率的に最大化できます。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'教育・スクール',  range:'平均 300〜600%', avg:450,  max:900,
+    tips:[{i:'🎓',t:'無料体験・無料説明会を最初のCVゴールにする。直接有料申込よりCPAが低くROASが改善しやすい。'},{i:'📊',t:'合格率・就職率などの実績数値を広告に入れる。CTR・CVR両方が改善しROASが上がる。'},{i:'🔍',t:'悩みキーワード（「〇〇 初心者 始め方」）を追加する。競合が少なくCPCが安いためROASが改善しやすい。'}],
+    ctaH:[{i:'📊',n:'LP改善でCVRとROASを上げる',d:'ヒートマップでLPのボトルネックを特定。無料体験申込のCVR改善がROAS直結。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で始める',c:''}],
+    ctaL:[{i:'📈',n:'スケールのタイミング',d:'ROASが高水準なら入学定員を増やして予算を積み増すフェーズ。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'医療・クリニック',range:'平均 400〜800%', avg:600,  max:1200,
+    tips:[{i:'📅',t:'Web予約ボタンをLPのファーストビューに固定する。スクロールしないと予約ボタンが見えないLPはROASが低い。'},{i:'🗺️',t:'Googleローカルキャンペーンを使う。「近くのクリニック」検索に対応することでCTRが上がりROASが改善する。'},{i:'⏰',t:'広告の配信時間を昼休み・夜21〜23時に集中させる。問い合わせが多い時間帯に入札を強化するとROASが改善する。'}],
+    ctaH:[{i:'📅',n:'Web予約システムを導入する',d:'電話予約をWebに移行するだけでCVRが大幅改善。ROASの向上に直結。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:''}],
+    ctaL:[{i:'📈',n:'診療枠を拡大する',d:'ROASが高水準なら広告予算を増やして集患数を増やすフェーズ。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'BtoB・SaaS',     range:'平均 300〜600%', avg:450,  max:900,
+    tips:[{i:'🆓',t:'無料トライアル・デモリクエストへの誘導を最上位に置く。BtoBは「まず試せる」導線がROAS改善の最短経路。'},{i:'📋',t:'導入事例・ROI試算資料をLP上に設置する。「この投資で元が取れる」根拠を示すとCVRが上がりROASが改善する。'},{i:'💼',t:'LinkedIn広告のターゲティングを活用する。役職・業種で絞れるLinkedIn広告がBtoBのROAS改善に有効なケースがある。'}],
+    ctaH:[{i:'📊',n:'MAツールでリードを育てる',d:'BtoBは検討期間が長い。MAでナーチャリングを自動化してROASを改善。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す',c:''}],
+    ctaL:[{i:'📈',n:'予算をスケールさせる',d:'ROASが目標以内なら予算増加でリード数を最大化。自動入札で効率化。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'飲食・デリバリー',range:'平均 200〜400%', avg:300,  max:600,
+    tips:[{i:'📍',t:'エリアターゲティングを店舗・デリバリー圏内に絞る。無駄な配信を減らし予算効率を上げてROASを改善。'},{i:'🎟️',t:'初回クーポン・割引オファーを広告クリエイティブに明示する。CTR・CVR両方が改善しROASが上がる。'},{i:'📱',t:'モバイル広告に予算を集中する。飲食系の検索・注文はスマホ経由が圧倒的に多くROASが高い。'}],
+    ctaH:[{i:'📍',n:'デリバリーモール掲載を検討',d:'Uber Eats・出前館への掲載でオーガニック流入を増やし広告ROASへの依存を下げる。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:''}],
+    ctaL:[{i:'📈',n:'リピーター育成でLTVを上げる',d:'ROASが高水準なら新規より既存顧客育成。LINE・ポイントでリピート率を改善。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'アプリ・ゲーム', range:'平均 300〜600%', avg:450,  max:900,
+    tips:[{i:'📱',t:'プレイアブル広告を使う。アプリ体験を広告内でできる形式は通常バナーの3〜5倍CTRが高くROASが改善する。'},{i:'⭐',t:'ストアのASO対策でオーガニック流入を増やす。広告ROASへの依存を下げながら総合的なROASを改善できる。'},{i:'🎮',t:'課金ユーザーのLookalike（類似オーディエンス）に広告を配信する。CVRが高くROASが大幅改善するケースが多い。'}],
+    ctaH:[{i:'📊',n:'ASO対策ツール',d:'App Storeの検索順位を上げて自然流入を増やし広告ROASへの依存を下げる。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す',c:''}],
+    ctaL:[{i:'📈',n:'課金率・ARPU向上へ',d:'ROASが高水準なら次は課金率・ARPU（ユーザー平均収益）の改善フェーズ。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'不動産・住宅',    range:'平均 300〜600%', avg:450,  max:900,
+    tips:[{i:'🏠',t:'「無料相談」「見学予約」などの低ハードルCTAを使う。直接購入相談よりCVRが上がりROASが改善する。'},{i:'📸',t:'VR内覧・動画ツアーを広告クリエイティブに使う。視覚的な訴求がCTRを上げROASが改善する。'},{i:'🎯',t:'エリア×ライフステージでターゲティングを細分化する。購買意図が高いセグメントへの集中投資でROASが改善する。'}],
+    ctaH:[{i:'📊',n:'LPO・ヒートマップツール',d:'LPのどこで離脱しているかを可視化。問い合わせCV率の改善でROASを向上。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す',c:''}],
+    ctaL:[{i:'📈',n:'成約率の改善へ',d:'ROASが高水準なら次は見学→成約率の改善フェーズ。CRMツールの活用が効果的。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]},
+  { name:'金融・保険',      range:'平均 300〜600%', avg:450,  max:900,
+    tips:[{i:'🛡️',t:'金融機関・認定機関のロゴを広告クリエイティブに入れる。信頼度が上がりCTRが改善しROASが向上する。'},{i:'🧮',t:'「〇〇万円節約できる」など具体的な数値訴求を広告に入れる。CVRが上がりROASが改善する。'},{i:'📝',t:'申込フォームをステップ分割する。完了率が上がるとCV数が増えROASが改善する。'}],
+    ctaH:[{i:'📊',n:'EFOで申込完了率を上げる',d:'金融申込フォームのCVR改善に特化。完了率の改善がROAS直結の最短施策。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す',c:''}],
+    ctaL:[{i:'📈',n:'LTV・継続率の改善へ',d:'ROASが高水準なら新規獲得よりクロスセル・継続率でLTVを最大化するフェーズ。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る',c:'rs-alt'}]}
+];
+
+const store = (() => {
+  try { localStorage.setItem('__rs__','1'); localStorage.removeItem('__rs__'); return localStorage; }
+  catch(e) { const m={}; return { getItem:k=>m[k]??null, setItem:(k,v)=>{m[k]=String(v);}, removeItem:k=>{delete m[k];} }; }
+})();
+
+let curSec=SECTORS[0], curSecIdx=0, lastRoas=null;
+
+const sg=document.getElementById('rsSectorGrid');
+SECTORS.forEach((s,i)=>{
+  const b=document.createElement('button');
+  b.className='rs-sector-btn'+(i===0?' rs-sec-on':'');
+  b.setAttribute('data-idx',i);
+  b.innerHTML=s.name+'<span class="rs-sec-sub">'+s.range+'</span>';
+  b.addEventListener('click',()=>pickSec(b,s,i));
+  sg.appendChild(b);
+});
+function pickSec(el,s,idx,silent){
+  document.querySelectorAll('.rs-sector-btn[data-idx]').forEach(b=>b.classList.remove('rs-sec-on'));
+  el.classList.add('rs-sec-on'); curSec=s; curSecIdx=idx;
+  if(!silent){saveState();recalc();}
+}
+
+[['hBtnCost','hBoxCost'],['hBtnRev','hBoxRev']].forEach(([bId,pId])=>{
+  const btn=document.getElementById(bId),box=document.getElementById(pId);
+  btn.addEventListener('click',()=>{const on=box.classList.toggle('rs-help-show');btn.classList.toggle('rs-help-on',on);});
+});
+
+function syncSlider(sId,dId,vId,fmt){
+  const s=document.getElementById(sId),d=document.getElementById(dId),v=document.getElementById(vId);
+  function upd(val){v.textContent=fmt(val);updateBg(s);saveState();recalc();}
+  s.addEventListener('input',()=>{d.value=s.value;upd(parseFloat(s.value));});
+  function doSyncD(){
+    d.value=d.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1');
+    let val=parseFloat(d.value);
+    if(isNaN(val)) return;
+    // スライダーバーの見た目だけ上限に制限、計算には生データを渡す
+    s.value=Math.max(parseFloat(s.min),Math.min(val,parseFloat(s.max)));
+    upd(val);
+  }
+  d.addEventListener('input', doSyncD);
+  d.addEventListener('blur',  doSyncD);
+}
+syncSlider('sCost','dCost','vCost',v=>Math.round(v).toLocaleString());
+syncSlider('sRev', 'dRev', 'vRev', v=>Math.round(v).toLocaleString());
+document.getElementById('sMargin').addEventListener('input',function(){
+  document.getElementById('vMargin').textContent=this.value;
+  updateBg(this);saveState();recalc();
+});
+document.getElementById('rsSimTarget').addEventListener('input',function(){
+  let v=this.value.replace(/[^0-9]/g,'');this.value=v;calcSim();
+});
+
+function updateBg(s){
+  const pct=((parseFloat(s.value)-parseFloat(s.min))/(parseFloat(s.max)-parseFloat(s.min))*100).toFixed(1);
+  s.style.background=`linear-gradient(to right,#1a8a3b ${pct}%,#e8f5ee ${pct}%)`;
+}
+['sCost','sRev','sMargin'].forEach(id=>updateBg(document.getElementById(id)));
+
+function saveState(){
+  try{store.setItem('roas_v1',JSON.stringify({cost:document.getElementById('sCost').value,rev:document.getElementById('sRev').value,margin:document.getElementById('sMargin').value,i:curSecIdx}));}catch(e){}
+}
+(function restore(){
+  try{
+    const raw=store.getItem('roas_v1');if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.cost){document.getElementById('sCost').value=d.cost;document.getElementById('dCost').value=d.cost;document.getElementById('vCost').textContent=Math.round(parseFloat(d.cost)).toLocaleString();}
+    if(d.rev) {document.getElementById('sRev').value=d.rev;document.getElementById('dRev').value=d.rev;document.getElementById('vRev').textContent=Math.round(parseFloat(d.rev)).toLocaleString();}
+    if(d.margin){document.getElementById('sMargin').value=d.margin;document.getElementById('vMargin').textContent=d.margin;}
+    ['sCost','sRev','sMargin'].forEach(id=>updateBg(document.getElementById(id)));
+    if(typeof d.i==='number'&&SECTORS[d.i]){const btns=document.querySelectorAll('.rs-sector-btn[data-idx]');if(btns[d.i])pickSec(btns[d.i],SECTORS[d.i],d.i,true);}
+    recalc();
+  }catch(e){}
+})();
+
+function recalc(){
+  const cost=parseFloat(document.getElementById('dCost').value)||parseFloat(document.getElementById('sCost').value);
+  const rev=parseFloat(document.getElementById('dRev').value)||parseFloat(document.getElementById('sRev').value);
+  // ⑯⑰ 空文字・ゼロ除算ガード
+  if(!cost||cost<=0||isNaN(cost)||isNaN(rev)){
+    document.getElementById('rsCard').className='rs-result';
+    document.getElementById('rsInner').innerHTML='<div class="rs-empty">スライダーを動かしてください</div>';
+    ['rsBepRow','rsGauge','rsVerdict','rsVerdictSub','rsFormula','rsActions','rsSim','rsBd','rsCta','rsTips'].forEach(id=>{
+      const el=document.getElementById(id); if(el)el.style.display='none';
+    });
+    return;
+  }
+  const margin=parseFloat(document.getElementById('sMargin').value)/100;
+  const roas=Math.round(rev/cost*100);
+  const bep=Math.round(100/margin);
+  const profit=Math.round(rev*margin-cost);
+  lastRoas=roas;
+
+  const card=document.getElementById('rsCard');
+  let cls='rs-result ';
+  if(roas>=curSec.avg*1.2)cls+='rs-on';
+  else if(roas>=bep)cls+='rs-on';
+  else if(roas>=bep*0.8)cls+='rs-warn';
+  else cls+='rs-low';
+  card.className=cls;
+
+  document.getElementById('rsInner').innerHTML='<div class="rs-num-row"><span class="rs-num">'+roas.toLocaleString()+'</span><span class="rs-pct">%</span></div>';
+
+  const bepRow=document.getElementById('rsBepRow');
+  bepRow.style.display='flex';
+  bepRow.innerHTML='<div class="rs-bep-chip"><div class="rs-bep-label">損益分岐点ROAS</div><div class="rs-bep-val">'+bep.toLocaleString()+'%</div></div>'+
+    '<div class="rs-bep-chip"><div class="rs-bep-label">粗利額（概算）</div><div class="rs-bep-val">'+(profit>=0?'+':'')+profit.toLocaleString()+'円</div></div>';
+
+  const gw=document.getElementById('rsGauge');gw.style.display='block';
+  document.getElementById('rsGaugeFill').style.width=Math.min(roas/curSec.max*100,100).toFixed(1)+'%';
+  document.getElementById('rsGaugeAvg').textContent='平均 '+curSec.avg+'%';
+  document.getElementById('rsGaugeMax').textContent=curSec.max+'%+';
+
+  const verdict=roas<bep?'損益分岐点を下回っています。要改善':roas<curSec.avg?'黒字ですが業界平均を下回っています':roas<curSec.avg*1.5?'業界平均的な水準です':roas<curSec.max?'業界平均以上の高ROASです':'トップ水準のROASです';
+  ['rsVerdict','rsVerdictSub','rsFormula','rsActions'].forEach(id=>document.getElementById(id).style.display='');
+  document.getElementById('rsVerdict').textContent=verdict;
+  document.getElementById('rsVerdictSub').textContent=curSec.name+'の平均ROAS：'+curSec.avg+'%（損益分岐点：'+bep+'%）';
+
+  document.getElementById('rsSim').className='rs-sim rs-sim-on';
+  calcSim();
+
+  const bd=document.getElementById('rsBd');bd.className='rs-bd rs-bd-on';
+  document.getElementById('bdCost').textContent=cost.toLocaleString()+' 円';
+  document.getElementById('bdRev').textContent=rev.toLocaleString()+' 円';
+  document.getElementById('bdRoas').textContent=roas.toLocaleString()+' %';
+  document.getElementById('roasBdProfit').textContent=(profit>=0?'+':'')+profit.toLocaleString()+' 円';
+  document.getElementById('roasBdBep').textContent=bep.toLocaleString()+' %';
+  document.getElementById('roasBdSector').textContent=curSec.name;
+  document.getElementById('roasBdAvg').textContent=curSec.avg+' %';
+
+  const isHigh=roas>=curSec.avg;
+  const items=isHigh?curSec.ctaL:curSec.ctaH;
+  const cta=document.getElementById('rsCta');
+  if(items&&items.length){
+    cta.className='rs-cta rs-cta-on';
+    document.getElementById('rsCtaList').innerHTML=items.map(x=>'<div class="rs-cta-item"><div class="rs-cta-ico">'+x.i+'</div><div class="rs-cta-body"><div class="rs-cta-name">'+x.n+'</div><div class="rs-cta-desc">'+x.d+'</div><a class="rs-cta-link '+x.c+'" href="'+x.u+'" target="_blank" rel="noopener sponsored">'+x.l+' →</a></div></div>').join('');
+  }
+
+  const tp=document.getElementById('rsTips');tp.className='rs-tips rs-tips-on';
+  document.getElementById('rsTipsSec').textContent=curSec.name;
+  document.getElementById('rsTipsList').innerHTML=curSec.tips.map(t=>'<div class="rs-tip-row"><span class="rs-tip-ic">'+t.i+'</span><span>'+t.t+'</span></div>').join('');
+}
+recalc();
+
+function calcSim(){
+  if(!lastRoas)return;
+  const target=parseFloat(document.getElementById('rsSimTarget').value);
+  const out=document.getElementById('rsSimOut');
+  if(isNaN(target)||target<=0){out.className='rs-sim-out';return;}
+  const cost=parseFloat(document.getElementById('dCost').value)||parseFloat(document.getElementById('sCost').value);
+  const requiredRev=Math.ceil(cost*target/100);
+  const currentRev=parseFloat(document.getElementById('sRev').value);
+  const diff=requiredRev-currentRev;
+  out.className='rs-sim-out rs-sim-out-on';
+  document.getElementById('rsSimMain').textContent='売上 '+requiredRev.toLocaleString()+' 円 が必要';
+  document.getElementById('rsSimSub').textContent='ROAS '+target+'% を広告費 '+Math.round(cost).toLocaleString()+'円 で達成するには';
+  const tag=document.getElementById('rsSimTag');
+  if(diff>0){tag.className='rs-sim-tag rs-need';tag.textContent='あと +'+diff.toLocaleString()+' 円の売上が必要';}
+  else{tag.className='rs-sim-tag rs-ok';tag.textContent='現在の売上で目標達成済み！';}
+}
+
+function doRsCopy(){
+  if(!lastRoas)return;
+  const cost=parseFloat(document.getElementById('dCost').value)||parseFloat(document.getElementById('sCost').value);
+  const rev=parseFloat(document.getElementById('dRev').value)||parseFloat(document.getElementById('sRev').value);
+  const txt='ROAS計算結果\n広告費：'+Math.round(cost).toLocaleString()+'円\n売上：'+Math.round(rev).toLocaleString()+'円\nROAS：'+lastRoas.toLocaleString()+'%\n業界（'+curSec.name+'）平均：'+curSec.avg+'%';
+  navigator.clipboard.writeText(txt).then(()=>{
+    const b=document.getElementById('rsCopyBtn');b.textContent='コピーしました ✓';b.classList.add('rs-done');
+    setTimeout(()=>{b.textContent='結果をコピー';b.classList.remove('rs-done');},2000);
+  }).catch(() => { /* クリップボードAPIが使えない環境（HTTP等）では動作しません */ });
+}
+function doRsShare(){
+  if(!lastRoas)return;
+  const verdict=document.getElementById('rsVerdict').textContent;
+  const txt='広告のROASを計算したら '+lastRoas.toLocaleString()+'% 【'+verdict+'】\n（'+curSec.name+'の平均: '+curSec.avg+'%）';
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt)+'&url='+encodeURIComponent(window.location.origin+window.location.pathname)+'&hashtags=計算ツール集','_blank','noopener');
+}
+function doRsReset(){
+  document.getElementById('sCost').value=100000;document.getElementById('dCost').value='';document.getElementById('vCost').textContent='100,000';
+  document.getElementById('sRev').value=400000;document.getElementById('dRev').value='';document.getElementById('vRev').textContent='400,000';
+  document.getElementById('sMargin').value=30;document.getElementById('vMargin').textContent='30';
+  document.getElementById('rsSimTarget').value='';
+  ['sCost','sRev','sMargin'].forEach(id=>updateBg(document.getElementById(id)));
+  try{store.removeItem('roas_v1');}catch(e){}
+  recalc();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ㉑ ブラウザ「戻る」(Bfcache)時の再計算
+window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
+</script>
+</body>
+</html>

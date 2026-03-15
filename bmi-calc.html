@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI計算ツール | 体格指数を無料で即計算 | 計算ツール集</title>
+<meta name="description" content="BMI（体格指数）を無料で即計算。BMI＝体重(kg)÷身長(m)²。標準体重は身長(m)²×22。肥満度判定・目標体重・あと何kg差かを即表示。登録不要・完全無料。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourdomain.com/bmi">
+<meta property="og:title" content="BMI計算ツール | 体格指数を無料で即計算">
+<meta property="og:description" content="BMIを無料で即計算。標準体重・理想体重・肥満度判定付き。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/bmi">
+<meta property="og:image" content="https://yourdomain.com/ogp-bmi.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BMI計算ツール | 体格指数を無料で即計算">
+<meta name="twitter:description" content="BMIを無料で即計算。標準体重・理想体重・肥満度判定付き。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "計算ツール集",
+      "item": "https://yourdomain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "BMI計算ツール",
+      "item": "https://yourdomain.com/bmi"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BMI計算ツール",
+  "url": "https://yourdomain.com/bmi",
+  "description": "BMI（体格指数）を無料で計算できるWebツール。標準体重・理想体重・肥満度判定付き。",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "dateModified": "2026-03-15"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "BMIとは何ですか？", "acceptedAnswer": { "@type": "Answer", "text": "BMI（Body Mass Index / 体格指数）とは、体重と身長から算出される肥満度を表す指標です。BMI = 体重(kg) ÷ 身長(m)² で計算します。" } },
+    { "@type": "Question", "name": "BMIの計算式は？", "acceptedAnswer": { "@type": "Answer", "text": "BMI = 体重(kg) ÷ 身長(m)² です。例えば体重60kg・身長170cmの場合、BMI = 60 ÷ 1.7² = 60 ÷ 2.89 = 20.8になります。" } },
+    { "@type": "Question", "name": "BMIの判定基準は？", "acceptedAnswer": { "@type": "Answer", "text": "日本肥満学会の判定基準は、BMI18.5未満が低体重（痩せ型）、18.5〜25未満が普通体重、25〜30未満が肥満（1度）、30〜35未満が肥満（2度）、35以上が高度肥満です。BMI22が統計的に最も病気になりにくいとされています。" } },
+    { "@type": "Question", "name": "標準体重の計算式は？", "acceptedAnswer": { "@type": "Answer", "text": "標準体重(kg) = 身長(m)² × 22 で計算します。例えば身長170cmの標準体重 = 1.7² × 22 = 2.89 × 22 = 63.6kgになります。" } },
+    { "@type": "Question", "name": "BMI22が理想とされるのはなぜですか？", "acceptedAnswer": { "@type": "Answer", "text": "日本肥満学会の研究によると、BMI22付近が最も疾病リスクが低いとされているためです。この値をもとに標準体重が計算されます。ただし筋肉量・年齢・体型によって個人差があります。" } },
+    { "@type": "Question", "name": "このBMI計算ツールは無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、完全無料で使えます。登録不要でご利用いただけます。入力したデータはサーバーに送信されず、すべてブラウザ内で計算します。" } }
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif; background: #f4f5f7; min-height: 100vh; padding: 0 0 80px; font-size: 16px; line-height: 1.6; color: #111; }
+  .bm-nav { background: #fff; border-bottom: 1px solid #e4e4e4; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+  .bm-nav-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; scrollbar-width: none; }
+  .bm-nav-inner::-webkit-scrollbar { display: none; }
+  .bm-nav-logo { font-size: 13px; font-weight: 800; color: #555; text-decoration: none; white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
+  .bm-nav-link { display: flex; align-items: center; height: 48px; padding: 0 12px; font-size: 12px; font-weight: 600; color: #888; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; flex-shrink: 0; }
+  .bm-nav-link:hover { color: #444; }
+  .bm-nav-link.bm-current { color: #444; border-bottom-color: #444; }
+  .bm-wrap { width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 16px 0; }
+  .bm-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #666; margin-bottom: 8px; }
+  .bm-title { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 6px; line-height: 1.3; }
+  .bm-desc { font-size: 13px; color: #777; margin-bottom: 10px; line-height: 1.6; }
+  .bm-secure { display: inline-flex; align-items: center; gap: 6px; background: #f8f8f8; border: 1px solid #e0e0e0; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #666; font-weight: 600; margin-bottom: 24px; }
+  /* 結果カード */
+  .bm-result { background: #2c2c2c; border-radius: 20px; padding: 28px 24px; margin-bottom: 20px; transition: background 0.3s; }
+  .bm-result.bm-thin   { background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); }
+  .bm-result.bm-normal { background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%); }
+  .bm-result.bm-fat1   { background: linear-gradient(135deg, #7b4f00 0%, #5c3a00 100%); }
+  .bm-result.bm-fat2   { background: linear-gradient(135deg, #c0392b 0%, #922b21 100%); }
+  .bm-result.bm-fat3   { background: #7b1c1c; }
+  .bm-res-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; text-align: center; }
+  .bm-num-row { display: flex; align-items: flex-end; justify-content: center; gap: 4px; line-height: 1; margin-bottom: 8px; }
+  .bm-num { font-size: 64px; font-weight: 800; color: #fff; letter-spacing: -2px; }
+  .bm-empty { font-size: 15px; color: rgba(255,255,255,0.2); padding: 20px 0; text-align: center; }
+  .bm-verdict { font-size: 18px; font-weight: 800; color: #fff; text-align: center; margin-bottom: 6px; }
+  .bm-chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 14px 0; }
+  .bm-chip { background: rgba(255,255,255,0.12); border-radius: 10px; padding: 10px 14px; text-align: center; flex: 1; min-width: 100px; }
+  .bm-chip-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
+  .bm-chip-val { font-size: 15px; font-weight: 800; color: #fff; }
+  .bm-formula { font-size: 11px; color: rgba(255,255,255,0.2); font-family: monospace; text-align: center; }
+  .bm-actions { display: flex; gap: 7px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  .bm-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 500; padding: 9px 14px; cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; min-height: 44px; display: flex; align-items: center; gap: 5px; -webkit-tap-highlight-color: transparent; }
+  .bm-btn:hover { background: rgba(255,255,255,0.18); }
+  .bm-btn.bm-done { background: rgba(255,255,255,0.22); color: #fff; }
+  .bm-btn.bm-dark { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1); }
+  /* パネル */
+  .bm-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .bm-panel-title { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 0.04em; margin-bottom: 16px; }
+  .bm-field { margin-bottom: 18px; }
+  .bm-field:last-child { margin-bottom: 0; }
+  .bm-field-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .bm-field-label { font-size: 13px; font-weight: 700; color: #333; }
+  .bm-input-row { display: flex; gap: 8px; align-items: center; }
+  .bm-input { flex: 1; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 28px; font-weight: 700; color: #111; outline: none; transition: border-color 0.15s; min-height: 52px; -webkit-appearance: none; background: #fff; }
+  .bm-input::-webkit-inner-spin-button, .bm-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .bm-input:focus { border-color: #666; }
+  .bm-unit-lbl { font-size: 16px; font-weight: 600; color: #aaa; flex-shrink: 0; }
+  .bm-select { width: 100%; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 15px; font-weight: 600; color: #444; background: #f8f8f8; outline: none; cursor: pointer; min-height: 52px; -webkit-tap-highlight-color: transparent; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+  /* BMI判定表 */
+  .bm-cta { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; border: 1.5px solid #e4e4e4; display: none; }
+  .bm-cta-hd { font-size: 11px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .bm-cta-item { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid #f2f2f2; }
+  .bm-cta-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .bm-cta-ico { width: 40px; height: 40px; border-radius: 10px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .bm-cta-body { flex: 1; }
+  .bm-cta-name { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .bm-cta-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
+  .bm-cta-link { display: inline-flex; align-items: center; gap: 4px; background: #444; color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-decoration: none; min-height: 36px; }
+  .bm-cta-link:hover { background: #222; }
+  .bm-cta-foot { font-size: 10px; color: #ccc; margin-top: 10px; text-align: center; }
+  .bm-table-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .bm-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .bm-table th { background: #f4f4f2; padding: 10px 12px; text-align: left; font-weight: 700; color: #555; border-bottom: 2px solid #e8e8e8; }
+  .bm-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #444; }
+  .bm-table tr:last-child td { border-bottom: none; }
+  .bm-table tr.bm-hl td { background: #f0f0ee; font-weight: 700; color: #111; }
+  .bm-article { background: #fff; border-radius: 14px; padding: 28px; margin-top: 8px; }
+  .bm-article h2 { font-size: 18px; font-weight: 700; color: #111; margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; line-height: 1.4; }
+  .bm-article h2:first-of-type { margin-top: 0; }
+  .bm-article p { font-size: 14px; color: #444; line-height: 1.9; margin-bottom: 14px; }
+  .bm-article p:last-child { margin-bottom: 0; }
+  .bm-hl { background: #f4f4f4; border-left: 3px solid #666; border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #333; line-height: 1.8; }
+  .bm-related { margin-top: 24px; padding-top: 20px; border-top: 2px solid #f0f0f0; }
+  .bm-related-label { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .bm-related-list { display: flex; flex-direction: column; gap: 8px; }
+  .bm-related-link { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #f8f8f8; border-radius: 10px; text-decoration: none; color: #333; font-size: 13px; font-weight: 600; transition: background 0.15s; }
+  .bm-related-link:hover { background: #f0f0f0; }
+  .bm-related-icon { font-size: 16px; flex-shrink: 0; }
+  .bm-related-body { flex: 1; }
+  .bm-related-sub { font-size: 11px; color: #aaa; font-weight: 400; margin-top: 1px; }
+  .bm-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e4e4e4; text-align: center; }
+  .bm-footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
+  .bm-footer-links a { font-size: 12px; color: #999; text-decoration: none; }
+  .bm-footer-links a:hover { color: #444; }
+  .bm-footer-copy { font-size: 11px; color: #bbb; }
+  .bm-note { font-size: 11px; color: #bbb; text-align: center; line-height: 1.7; margin-top: 14px; }
+  @media (max-width: 600px) { .bm-title { font-size: 22px; } .bm-num { font-size: 52px; } .bm-article { padding: 20px 16px; } }
+
+
+  .bm-input::placeholder { color: #aaa; }
+  /* ===== 印刷・PDF保存用スタイル ===== */
+  @media print {
+    .bm-nav,
+    footer,
+    .bm-cta {
+      display: none !important;
+    }
+    .bm-result {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: none !important;
+      border: 1px solid #ccc !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .bm-result * {
+      color: #111 !important;
+    }
+    body {
+      background: #fff !important;
+    }
+    .bm-wrap {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  /* スマホのタップ後hover残りバグ防止 */
+  @media (hover: none) {
+    a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
+  }
+</style>
+<!-- Google Analytics（GA4） ※リリース後にIDを設定 -->
+<!-- 設定方法: G-XXXXXXXXXX をご自身の測定IDに書き換えてコメントを外す -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:site_name" content="計算ツール集">
+<!-- Google AdSense（審査通過後にコメントを外してIDを設定）-->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+<!--
+このページはBMI（体格指数）を無料で計算できるツールです。
+身長・体重を入力するだけでBMIを即算出。
+標準体重・理想体重・肥満度判定・目標体重まで何kg減らすべきか表示。
+計算式：BMI = 体重(kg) ÷ 身長(m)²
+登録不要・完全無料。入力データはサーバーに送信されません。
+最終更新：2026年3月。継続運営中。
+-->
+<nav class="bm-nav">
+  <div class="bm-nav-inner">
+    <a class="bm-nav-logo" href="/">📊 計算ツール集</a>
+    <a class="bm-nav-link" href="/cvr">CVR</a>
+    <a class="bm-nav-link" href="/cpa">CPA</a>
+    <a class="bm-nav-link" href="/roi">ROI</a>
+    <a class="bm-nav-link" href="/ltv">LTV</a>
+    <a class="bm-nav-link" href="/roas">ROAS</a>
+    <a class="bm-nav-link" href="/ctr">CTR</a>
+    <a class="bm-nav-link" href="/bep">損益分岐点</a>
+    <a class="bm-nav-link" href="/tedori">手取り</a>
+    <a class="bm-nav-link" href="/loan">ローン</a>
+    <a class="bm-nav-link bm-current" href="/bmi">BMI</a>
+  </div>
+</nav>
+<div class="bm-wrap">
+  <div class="bm-eyebrow">無料ツール</div>
+  <h1 class="bm-title">BMI計算ツール</h1>
+  <p class="bm-desc">身長・体重を入力するだけ。肥満度判定・標準体重・目標体重まで何kg減らすべきかを即計算します。</p>
+  <div class="bm-secure">
+    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5L2 5V9C2 11.2 4.3 13 7 13C9.7 13 12 11.2 12 9V5L7 1.5Z" stroke="#666" stroke-width="1.2" fill="none"/><path d="M5 7L6.5 8.5L9 6" stroke="#666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    入力したデータはサーバーに送信されません。すべてブラウザ内で計算します。
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-bottom:16px;">※ 当サイトは<a href="/privacy" style="color:#aaa;">アフィリエイト広告</a>を含む場合があります。</p>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <div class="bm-result" id="bmCard">
+    <div class="bm-res-eyebrow">BMI（体格指数）</div>
+    <div id="bmInner"><div class="bm-empty">身長と体重を入力してください</div></div>
+    <div class="bm-chips" id="bmChips" style="display:none;"></div>
+    <div class="bm-formula" id="bmFormula" style="display:none;">BMI = 体重(kg) ÷ 身長(m)²　標準体重 = 身長(m)² × 22</div>
+    <div class="bm-actions" id="bmActions" style="display:none;">
+      <button type="button" class="bm-btn" id="bmCopyBtn" onclick="doBmCopy()">結果をコピー</button>
+      <button type="button" class="bm-btn bm-dark" onclick="doBmShare()">𝕏 でシェア</button>
+      <button type="button" class="bm-btn" onclick="doBmReset()">やり直す</button>
+    </div>
+  </div>
+
+  <div class="bm-panel">
+    <div class="bm-panel-title">身長・体重を入力</div>
+    <div class="bm-field">
+      <div class="bm-field-head"><label class="bm-field-label" for="bmHeight">身長</label></div>
+      <div class="bm-input-row">
+        <input type="text" class="bm-input" id="bmHeight" placeholder="170" inputmode="decimal" min="50" max="250" step="0.1">
+        <span class="bm-unit-lbl">cm</span>
+      </div>
+    </div>
+    <div class="bm-field">
+      <div class="bm-field-head"><label class="bm-field-label" for="bmWeight">体重</label></div>
+      <div class="bm-input-row">
+        <input type="text" class="bm-input" id="bmWeight" placeholder="60" inputmode="decimal" min="1" max="300" step="0.1">
+        <span class="bm-unit-lbl">kg</span>
+      </div>
+    </div>
+    <div class="bm-field">
+      <div class="bm-field-head"><span class="bm-field-label">目標BMI（任意）</span></div>
+      <select class="bm-select" id="bmGoal" onchange="saveState();recalc();">
+        <option value="22">BMI 22（標準・最も病気になりにくい）</option>
+        <option value="21">BMI 21（やや引き締まった体型）</option>
+        <option value="20">BMI 20（細身体型）</option>
+        <option value="19">BMI 19（かなり細身）</option>
+        <option value="24">BMI 24（普通体重の上限目安）</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- AdSense：ツール下・記事上 -->
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <!-- アフィリエイトCTA -->
+  <div class="bm-cta" id="bmCtaCard">
+    <div class="bm-cta-hd">PR・おすすめサービス</div>
+    <div id="bmCtaList"></div>
+    <p class="bm-cta-foot">※ 当サイトはアフィリエイト広告を含む場合があります</p>
+  </div>
+
+  <!-- BMI判定表 -->
+  <div class="bm-table-panel">
+    <div class="bm-panel-title">📊 BMI判定基準（日本肥満学会）</div>
+    <table class="bm-table">
+      <tr><th>BMI</th><th>判定</th><th>リスク目安</th></tr>
+      <tr id="bmr-thin"><td>18.5未満</td><td>低体重（痩せ型）</td><td>栄養不足・骨粗しょう症リスク</td></tr>
+      <tr id="bmr-normal"><td>18.5〜25未満</td><td>✅ 普通体重（標準）</td><td>最もリスクが低い</td></tr>
+      <tr id="bmr-fat1"><td>25〜30未満</td><td>肥満（1度）</td><td>生活習慣病リスクあり</td></tr>
+      <tr id="bmr-fat2"><td>30〜35未満</td><td>肥満（2度）</td><td>医師への相談を推奨</td></tr>
+      <tr id="bmr-fat3"><td>35以上</td><td>肥満（3〜4度）</td><td>高度肥満・医療が必要なレベル</td></tr>
+    </table>
+  </div>
+
+  <div class="bm-note">※BMIは参考値です。筋肉量・骨密度・年齢・体型により個人差があります。健康管理は医師にご相談ください。</div>
+
+  <div class="bm-article">
+    <div style="font-size:11px;color:#bbb;margin-bottom:20px;">最終更新：2026年3月</div>
+    <h2>BMIとは何ですか？</h2>
+    <p>BMI（Body Mass Index / 体格指数）とは、体重と身長から算出される肥満度を表す国際的な指標です。<strong>BMI = 体重(kg) ÷ 身長(m)²</strong>で計算します。例えば体重60kg・身長170cmの場合、BMI = 60 ÷ 1.7² = 60 ÷ 2.89 ≈ 20.8（普通体重）になります。</p>
+    <div class="bm-hl">✅ BMIの計算式：BMI = 体重(kg) ÷ 身長(m)²<br>例）60kg ÷ 1.70m² = 60 ÷ 2.89 ≈ BMI 20.8（普通体重）<br>標準体重 = 身長(m)² × 22</div>
+
+    <h2>BMIの判定基準（日本肥満学会）</h2>
+    <p>日本肥満学会の基準では、BMI 18.5未満が「低体重（痩せ型）」、18.5〜25未満が「普通体重」、25〜30未満が「肥満（1度）」、30〜35未満が「肥満（2度）」、35以上が「高度肥満（3度・4度）」と分類されます。</p>
+    <p>WHOの基準では30以上を肥満と定義しており、日本の基準（25以上）と異なります。日本人は欧米人と比べて同じBMIでも体脂肪率が高い傾向があるため、日本では25以上から肥満とされています。</p>
+
+    <h2>標準体重はなぜBMI22なのですか？</h2>
+    <p>日本肥満学会の研究によると、BMI22付近が統計的に最も疾病（糖尿病・高血圧・心疾患など）のリスクが低いとされています。標準体重 = 身長(m)² × 22 で計算します。</p>
+    <p>身長165cmの場合の標準体重 = 1.65² × 22 = 2.7225 × 22 ≈ 59.9kg、身長175cmの場合 = 1.75² × 22 ≈ 67.4kgになります。</p>
+
+    <h2>BMIの限界・注意点</h2>
+    <p>BMIは身長と体重だけで計算するため、体脂肪率・筋肉量・骨密度・体型の分布（脂肪がどこについているか）は考慮されません。筋肉量が多いアスリートはBMIが高くなりやすく「肥満」と判定されることがあります。逆にBMIが標準でも内臓脂肪が多い「隠れ肥満（メタボリックシンドローム）」のケースもあります。BMIはあくまで体格の目安として活用し、より正確な健康状態の把握には体脂肪率測定や医師の診断を活用してください。</p>
+
+    <h2>身長・体重別のBMI早見表</h2>
+    <p>身長150cmの標準体重は49.5kg・普通体重の上限は56.2kg、身長160cmは56.3kg・上限64.0kg、身長170cmは63.6kg・上限72.3kg、身長180cmは71.3kg・上限81.0kgが目安です。</p>
+
+    <h2>BMIを改善するための基本的な考え方</h2>
+    <p>BMIを下げる（体重を減らす）ためには、摂取カロリーを消費カロリーより少なくする必要があります。1kgの体脂肪を減らすには約7,200kcalの消費カロリーの余剰が必要です。無理な食事制限は筋肉量の低下・基礎代謝の低下につながるため、適度な運動と組み合わせた緩やかな減量（月1〜2kg程度）が健康的です。逆にBMIが18.5未満の低体重の場合は、タンパク質・カルシウムなど栄養バランスの良い食事での体重増加が必要です。</p>
+    <div class="bm-related">
+      <div class="bm-related-label">関連ツール</div>
+      <div class="bm-related-list">
+        <a class="bm-related-link" href="/tedori"><span class="bm-related-icon">💴</span><div class="bm-related-body"><div>手取り計算ツール</div><div class="bm-related-sub">額面給与から手取りを即計算。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="bm-related-link" href="/loan"><span class="bm-related-icon">🏠</span><div class="bm-related-body"><div>ローン計算ツール</div><div class="bm-related-sub">住宅ローン・カーローンの月々の返済額を計算。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="bm-related-link" href="/cvr"><span class="bm-related-icon">📊</span><div class="bm-related-body"><div>CVR計算ツール</div><div class="bm-related-sub">マーケター向けコンバージョン率計算ツール。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  <!--
+  ===== リリース前チェックリスト =====
+  □ og:url / og:image を実際のドメインに変更
+  □ WebApplicationスキーマの"url"を変更
+  □ AdSenseのコメントを外してIDを変更（審査通過後）
+  ======================================
+  -->
+  <footer class="bm-footer">
+    <div class="bm-footer-links"><a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><a href="/privacy">プライバシーポリシー</a></div>
+    <div class="bm-footer-copy">© 2026 計算ツール集</div>
+  </footer>
+</div>
+<script>
+const store=(()=>{try{localStorage.setItem('__bm__','1');localStorage.removeItem('__bm__');return localStorage;}catch(e){const m={};return{getItem:k=>m[k]??null,setItem:(k,v)=>{m[k]=String(v);},removeItem:k=>{delete m[k];}}}})();
+let lastBmi=null;
+
+['bmHeight','bmWeight'].forEach(id=>{
+  const el=document.getElementById(id);
+  function bmProcess(){
+    el.value=el.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1');
+    saveState();recalc();
+  }
+  el.addEventListener('input', bmProcess);
+  el.addEventListener('blur',  bmProcess);
+});
+document.getElementById('bmGoal').addEventListener('change',()=>{saveState();recalc();});
+
+function saveState(){
+  try{store.setItem('bmi_v1',JSON.stringify({h:document.getElementById('bmHeight').value,w:document.getElementById('bmWeight').value,g:document.getElementById('bmGoal').value}));}catch(e){}
+}
+(function restore(){
+  try{
+    const raw=store.getItem('bmi_v1');if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.h)document.getElementById('bmHeight').value=d.h;
+    if(d.w)document.getElementById('bmWeight').value=d.w;
+    if(d.g)document.getElementById('bmGoal').value=d.g;
+    recalc();
+  }catch(e){}
+})();
+
+const CATEGORIES=[
+  {id:'bmr-thin',  cls:'bm-thin',   label:'低体重（痩せ型）',   min:0,   max:18.5},
+  {id:'bmr-normal',cls:'bm-normal', label:'✅ 普通体重',         min:18.5,max:25},
+  {id:'bmr-fat1',  cls:'bm-fat1',   label:'肥満（1度）',         min:25,  max:30},
+  {id:'bmr-fat2',  cls:'bm-fat2',   label:'肥満（2度）',         min:30,  max:35},
+  {id:'bmr-fat3',  cls:'bm-fat3',   label:'高度肥満',            min:35,  max:999}
+];
+
+function recalc(){
+  const h=parseFloat(document.getElementById('bmHeight').value);
+  const w=parseFloat(document.getElementById('bmWeight').value);
+  const goalBmi=parseFloat(document.getElementById('bmGoal').value)||22;
+  const card=document.getElementById('bmCard');
+
+  if(isNaN(h)||h<=0||isNaN(w)||w<=0){
+    lastBmi=null;
+    card.className='bm-result';
+    document.getElementById('bmInner').innerHTML='<div class="bm-empty">身長と体重を入力してください</div>';
+    ['bmChips','bmFormula','bmActions'].forEach(id=>document.getElementById(id).style.display='none');
+    document.querySelectorAll('.bm-table tr[id]').forEach(tr=>tr.classList.remove('bm-hl'));
+    return;
+  }
+
+  const hm=h/100;
+  const bmi=w/(hm*hm);
+  lastBmi={h,w,bmi,goalBmi};
+
+  const stdWeight=(hm*hm*22).toFixed(1);
+  const goalWeight=(hm*hm*goalBmi).toFixed(1);
+  const diffToGoal=(w-parseFloat(goalWeight)).toFixed(1);
+
+  // カテゴリ判定
+  const cat=CATEGORIES.find(c=>bmi>=c.min&&bmi<c.max)||CATEGORIES[CATEGORIES.length-1];
+  card.className='bm-result '+cat.cls;
+  document.getElementById('bmInner').innerHTML=
+    '<div class="bm-num-row"><span class="bm-num">'+bmi.toFixed(1)+'</span></div>'+
+    '<div class="bm-verdict">'+cat.label+'</div>';
+
+  const chips=document.getElementById('bmChips');
+  chips.style.display='flex';
+  chips.innerHTML=
+    '<div class="bm-chip"><div class="bm-chip-label">標準体重（BMI22）</div><div class="bm-chip-val">'+stdWeight+'kg</div></div>'+
+    '<div class="bm-chip"><div class="bm-chip-label">目標体重（BMI'+goalBmi+'）</div><div class="bm-chip-val">'+goalWeight+'kg</div></div>'+
+    '<div class="bm-chip"><div class="bm-chip-label">目標まで</div><div class="bm-chip-val">'+(parseFloat(diffToGoal)>0?'+':'')+diffToGoal+'kg</div></div>';
+
+  ['bmFormula','bmActions'].forEach(id=>document.getElementById(id).style.display='');
+
+  // 表ハイライト
+  document.querySelectorAll('.bm-table tr[id]').forEach(tr=>tr.classList.remove('bm-hl'));
+  document.getElementById(cat.id).classList.add('bm-hl');
+}
+
+function doBmCopy(){
+  if(!lastBmi)return;
+  const {h,w,bmi,goalBmi}=lastBmi;
+  const hm=h/100;
+  const cat=CATEGORIES.find(c=>bmi>=c.min&&bmi<c.max)||CATEGORIES[CATEGORIES.length-1];
+  const goalWeight=(hm*hm*goalBmi).toFixed(1);
+  const txt='BMI計算結果\n身長：'+h+'cm　体重：'+w+'kg\nBMI：'+bmi.toFixed(1)+'（'+cat.label+'）\n標準体重：'+(hm*hm*22).toFixed(1)+'kg\n目標体重（BMI'+goalBmi+'）：'+goalWeight+'kg';
+  navigator.clipboard.writeText(txt).then(()=>{
+    const b=document.getElementById('bmCopyBtn');b.textContent='コピーしました ✓';b.classList.add('bm-done');
+    setTimeout(()=>{b.textContent='結果をコピー';b.classList.remove('bm-done');},2000);
+  }).catch(() => { /* クリップボードAPIが使えない環境（HTTP等）では動作しません */ });
+}
+function doBmShare(){
+  if(!lastBmi)return;
+  const {h,w,bmi}=lastBmi;
+  const cat=CATEGORIES.find(c=>bmi>=c.min&&bmi<c.max)||CATEGORIES[CATEGORIES.length-1];
+  const hm=h/100;
+  const std=(hm*hm*22).toFixed(1);
+  const txt='BMIを計算したら '+bmi.toFixed(1)+' （'+cat.label+'）でした。標準体重は'+std+'kgです。';
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt)+'&url='+encodeURIComponent(window.location.origin+window.location.pathname)+'&hashtags=計算ツール集','_blank','noopener');
+}
+function doBmReset(){
+  ['bmHeight','bmWeight'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('bmGoal').value='22';
+  document.querySelectorAll('.bm-table tr[id]').forEach(tr=>tr.classList.remove('bm-hl'));
+  try{store.removeItem('bmi_v1');}catch(e){}
+  recalc();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ㉑ ブラウザ「戻る」(Bfcache)時の再計算
+window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
+</script>
+</body>
+</html>

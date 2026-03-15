@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>損益分岐点計算ツール | 無料・売上目標を即算出 | 計算ツール集</title>
+<meta name="description" content="損益分岐点（BEP）を無料で即計算。BEP＝固定費÷（1－変動費率）。固定費・変動費率を入力するだけ。目標利益達成に必要な売上・販売数を逆算。事業計画・価格設定に。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourdomain.com/bep">
+<meta property="og:title" content="損益分岐点計算ツール | 無料・売上目標を即算出">
+<meta property="og:description" content="損益分岐点を無料で即計算。目標利益達成に必要な売上・販売数を逆算。事業計画・価格設定に役立つ無料ツール。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/bep">
+<meta property="og:image" content="https://yourdomain.com/ogp-bep.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="損益分岐点計算ツール | 無料・売上目標を即算出">
+<meta name="twitter:description" content="損益分岐点を無料で即計算。目標利益達成に必要な売上・販売数を逆算。事業計画・価格設定に役立つ無料ツール。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "計算ツール集",
+      "item": "https://yourdomain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "損益分岐点計算ツール",
+      "item": "https://yourdomain.com/bep"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "損益分岐点計算ツール",
+  "url": "https://yourdomain.com/bep",
+  "description": "損益分岐点（BEP）を無料で計算できるWebツール。目標利益達成に必要な売上・販売数を逆算。事業計画・価格設定に活用できます。",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "dateModified": "2026-03-15"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "損益分岐点とは何ですか？", "acceptedAnswer": { "@type": "Answer", "text": "損益分岐点（BEP：Break Even Point）とは、売上と費用が等しくなる売上高のことです。これを上回ると黒字、下回ると赤字になります。損益分岐点売上高 = 固定費 ÷（1 − 変動費率）で計算します。" } },
+    { "@type": "Question", "name": "損益分岐点の計算式は？", "acceptedAnswer": { "@type": "Answer", "text": "損益分岐点売上高 = 固定費 ÷（1 − 変動費率）です。変動費率は「変動費 ÷ 売上高」で算出します。例えば固定費100万円・変動費率60%なら損益分岐点 = 1,000,000 ÷（1 − 0.6）= 2,500,000円になります。" } },
+    { "@type": "Question", "name": "固定費と変動費の違いは？", "acceptedAnswer": { "@type": "Answer", "text": "固定費は売上に関係なく一定にかかる費用（家賃・人件費・保険料など）、変動費は売上に比例して増減する費用（原材料費・仕入れ費・販売手数料など）です。" } },
+    { "@type": "Question", "name": "損益分岐点比率とは何ですか？", "acceptedAnswer": { "@type": "Answer", "text": "損益分岐点比率 = 損益分岐点売上高 ÷ 実際の売上高 × 100 で計算します。80%以下が優良、80〜90%が普通、90%以上は要注意とされます。低いほど赤字になりにくい安全な経営状態を示します。" } },
+    { "@type": "Question", "name": "損益分岐点を下げるにはどうすればよいですか？", "acceptedAnswer": { "@type": "Answer", "text": "損益分岐点を下げるには①固定費を削減する（家賃交渉・人員最適化）②変動費率を下げる（原価低減・仕入れ改善）③販売単価を上げる（アップセル・価格改定）の3つが基本施策です。" } },
+    { "@type": "Question", "name": "このツールは無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、完全無料で使えます。登録不要でご利用いただけます。入力したデータはサーバーに送信されず、すべてブラウザ内で計算します。" } }
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif; background: #f4f5f7; min-height: 100vh; padding: 0 0 80px; font-size: 16px; line-height: 1.6; color: #111; }
+
+  .bp-nav { background: #fff; border-bottom: 1px solid #e4e4e4; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+  .bp-nav-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; scrollbar-width: none; }
+  .bp-nav-inner::-webkit-scrollbar { display: none; }
+  .bp-nav-logo { font-size: 13px; font-weight: 800; color: #555; text-decoration: none; white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
+  .bp-nav-link { display: flex; align-items: center; height: 48px; padding: 0 12px; font-size: 12px; font-weight: 600; color: #888; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
+  .bp-nav-link:hover { color: #444; }
+  .bp-nav-link.bp-current { color: #444; border-bottom-color: #444; }
+  .bp-nav-link.bp-disabled { color: #ccc; cursor: default; }
+  .bp-badge { font-size: 9px; font-weight: 700; background: #eee; color: #bbb; padding: 1px 5px; border-radius: 4px; margin-left: 4px; }
+
+  .bp-wrap { width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 16px 0; }
+  .bp-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #666; margin-bottom: 8px; }
+  .bp-title { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 6px; line-height: 1.3; }
+  .bp-desc { font-size: 13px; color: #777; margin-bottom: 10px; line-height: 1.6; }
+  .bp-secure { display: inline-flex; align-items: center; gap: 6px; background: #f8f8f8; border: 1px solid #e0e0e0; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #666; font-weight: 600; margin-bottom: 24px; }
+
+  /* 結果カード */
+  .bp-result { background: #2c2c2c; border-radius: 20px; padding: 28px 24px; margin-bottom: 20px; transition: background 0.3s; position: relative; overflow: hidden; }
+  .bp-result::before { content:''; position:absolute; top:-40px; right:-40px; width:160px; height:160px; border-radius:50%; background:rgba(255,255,255,0.03); pointer-events:none; }
+  .bp-result.bp-rc-on  { background: #2c2c2c; }
+  .bp-result.bp-rc-safe { background: linear-gradient(135deg, #2d6a4f 0%, #1b4332 100%); }
+  .bp-result.bp-rc-warn { background: linear-gradient(135deg, #7b4f00 0%, #5c3a00 100%); }
+  .bp-result.bp-rc-danger { background: #7b1c1c; }
+  .bp-res-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+  .bp-num-row { display: flex; align-items: flex-end; justify-content: center; gap: 4px; line-height: 1; margin-bottom: 8px; }
+  .bp-num { font-size: 56px; font-weight: 800; color: #fff; letter-spacing: -2px; }
+  .bp-unit { font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.6); padding-bottom: 6px; }
+  .bp-empty { font-size: 15px; color: rgba(255,255,255,0.2); padding: 20px 0; text-align: center; }
+  .bp-verdict { font-size: 14px; font-weight: 700; color: #fff; text-align: center; margin-bottom: 4px; }
+  .bp-verdict-sub { font-size: 11px; color: rgba(255,255,255,0.45); text-align: center; line-height: 1.5; margin-bottom: 14px; }
+  .bp-chips { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .bp-chip { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 10px 16px; text-align: center; flex: 1; min-width: 110px; }
+  .bp-chip-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-bottom: 4px; }
+  .bp-chip-val { font-size: 16px; font-weight: 800; color: #fff; }
+  .bp-formula { font-size: 11px; color: rgba(255,255,255,0.25); font-family: monospace; text-align: center; }
+  .bp-actions { display: flex; gap: 7px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  .bp-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 500; padding: 9px 14px; cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; min-height: 44px; display: flex; align-items: center; gap: 5px; -webkit-tap-highlight-color: transparent; }
+  .bp-btn:hover { background: rgba(255,255,255,0.18); }
+  .bp-btn.bp-done { background: rgba(255,255,255,0.22); color: #fff; }
+  .bp-btn.bp-dark { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1); }
+
+  /* パネル */
+  .bp-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .bp-panel-title { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 0.04em; margin-bottom: 16px; }
+
+  /* ドロップダウン付き入力グループ */
+  .bp-field-group { margin-bottom: 18px; }
+  .bp-field-group:last-child { margin-bottom: 0; }
+  .bp-field-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .bp-field-label { font-size: 13px; font-weight: 700; color: #333; }
+  .bp-field-hint { font-size: 11px; color: #bbb; }
+  .bp-input-row { display: flex; gap: 8px; align-items: stretch; }
+  .bp-input { flex: 1; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 20px; font-weight: 700; color: #111; outline: none; transition: border-color 0.15s; min-height: 52px; -webkit-appearance: none; background: #fff; }
+  .bp-input::-webkit-inner-spin-button, .bp-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .bp-input:focus { border-color: #666; }
+  .bp-unit-label { display: flex; align-items: center; font-size: 14px; font-weight: 600; color: #aaa; flex-shrink: 0; padding: 0 4px; }
+  /* ドロップダウン */
+  .bp-select { border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 14px; font-weight: 600; color: #444; background: #f8f8f8; outline: none; cursor: pointer; min-height: 52px; transition: border-color 0.15s; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+  .bp-select:focus { border-color: #666; }
+  .bp-preview { font-size: 12px; color: #bbb; margin-top: 5px; min-height: 16px; }
+
+  /* 内訳・シミュレーション */
+  .bp-bd { background: #fff; border-radius: 14px; padding: 16px 18px; margin-bottom: 14px; display: none; }
+  .bp-bd.bp-bd-on { display: block; }
+  .bp-bd-title { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .bp-bd-row { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid #f2f2f2; }
+  .bp-bd-row:last-child { border-bottom: none; }
+  .bp-bd-key { font-size: 13px; color: #888; }
+  .bp-bd-val { font-size: 13px; font-weight: 700; color: #111; }
+  .bp-bd-val.bp-acc { color: #444; font-size: 14px; }
+
+  .bp-sim { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; display: none; }
+  .bp-sim.bp-sim-on { display: block; }
+  .bp-sim-title { font-size: 12px; font-weight: 700; color: #777; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .bp-sim-row { display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .bp-sim-input { flex: 1; border: 1.5px solid #e4e4e4; border-radius: 8px; padding: 10px 12px; font-size: 16px; font-weight: 600; color: #111; outline: none; transition: border-color 0.15s; min-height: 44px; -webkit-appearance: none; background: #fff; }
+  .bp-sim-input:focus { border-color: #666; }
+  .bp-sim-unit { font-size: 13px; color: #aaa; flex-shrink: 0; }
+  .bp-sim-out { background: #f8f8f8; border-radius: 10px; padding: 14px 16px; display: none; }
+  .bp-sim-out.bp-sim-out-on { display: block; }
+  .bp-sim-main { font-size: 18px; font-weight: 800; color: #111; margin-bottom: 4px; }
+  .bp-sim-sub { font-size: 12px; color: #888; }
+  .bp-sim-tag { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+  .bp-sim-tag.bp-need { background: #fff0f0; color: #d93025; }
+  .bp-sim-tag.bp-ok   { background: #f0f0f0; color: #444; }
+
+  /* アフィリエイトCTA */
+  .bp-cta { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; border: 1.5px solid #e4e4e4; }
+  .bp-cta-header { font-size: 11px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .bp-cta-item { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid #f2f2f2; }
+  .bp-cta-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .bp-cta-icon { width: 40px; height: 40px; border-radius: 10px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .bp-cta-body { flex: 1; min-width: 0; }
+  .bp-cta-name { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .bp-cta-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
+  .bp-cta-link { display: inline-flex; align-items: center; gap: 4px; background: #444; color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-decoration: none; transition: background 0.15s; min-height: 36px; }
+  .bp-cta-link:hover { background: #222; }
+  .bp-cta-note { font-size: 10px; color: #ccc; margin-top: 10px; text-align: center; }
+
+  /* 記事 */
+  .bp-article { background: #fff; border-radius: 14px; padding: 28px; margin-top: 8px; }
+  .bp-article h2 { font-size: 18px; font-weight: 700; color: #111; margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; line-height: 1.4; }
+  .bp-article h2:first-of-type { margin-top: 0; }
+  .bp-article h3 { font-size: 15px; font-weight: 700; color: #333; margin: 20px 0 8px; }
+  .bp-article p { font-size: 14px; color: #444; line-height: 1.9; margin-bottom: 14px; }
+  .bp-article p:last-child { margin-bottom: 0; }
+  .bp-article ul { font-size: 14px; color: #444; padding-left: 20px; margin-bottom: 14px; line-height: 1.9; }
+  .bp-article ul li { margin-bottom: 4px; }
+  .bp-hl { background: #f4f4f4; border-left: 3px solid #666; border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #333; line-height: 1.8; }
+  .bp-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 16px 0; }
+  .bp-table th { background: #f4f4f2; padding: 10px 12px; text-align: left; font-weight: 700; color: #555; border-bottom: 2px solid #e8e8e8; }
+  .bp-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #444; line-height: 1.6; }
+  .bp-table tr:last-child td { border-bottom: none; }
+  .bp-related { margin-top: 24px; padding-top: 20px; border-top: 2px solid #f0f0f0; }
+  .bp-related-label { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .bp-related-list { display: flex; flex-direction: column; gap: 8px; }
+  .bp-related-link { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #f8f8f8; border-radius: 10px; text-decoration: none; color: #333; font-size: 13px; font-weight: 600; transition: background 0.15s; }
+  .bp-related-link:hover { background: #f0f0f0; }
+  .bp-related-icon { font-size: 16px; flex-shrink: 0; }
+  .bp-related-body { flex: 1; }
+  .bp-related-sub { font-size: 11px; color: #aaa; font-weight: 400; margin-top: 1px; }
+  .bp-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e4e4e4; text-align: center; }
+  .bp-footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
+  .bp-footer-links a { font-size: 12px; color: #999; text-decoration: none; }
+  .bp-footer-links a:hover { color: #444; }
+  .bp-footer-copy { font-size: 11px; color: #bbb; }
+  .bp-note { font-size: 11px; color: #bbb; text-align: center; line-height: 1.7; margin-top: 14px; }
+  @media (max-width: 600px) { .bp-title { font-size: 22px; } .bp-num { font-size: 44px; } .bp-article { padding: 20px 16px; } .bp-chips { gap: 6px; } .bp-chip { min-width: 90px; } }
+
+
+  .bp-input::placeholder { color: #aaa; }
+  /* ===== 印刷・PDF保存用スタイル ===== */
+  @media print {
+    .bp-nav,
+    footer,
+    .bp-cta {
+      display: none !important;
+    }
+    .bp-result {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: none !important;
+      border: 1px solid #ccc !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .bp-result * {
+      color: #111 !important;
+    }
+    body {
+      background: #fff !important;
+    }
+    .bp-wrap {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  /* スマホのタップ後hover残りバグ防止 */
+  @media (hover: none) {
+    a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
+  }
+</style>
+<!-- Google Analytics（GA4） ※リリース後にIDを設定 -->
+<!-- 設定方法: G-XXXXXXXXXX をご自身の測定IDに書き換えてコメントを外す -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:site_name" content="計算ツール集">
+<!-- Google AdSense（審査通過後にコメントを外してIDを設定）-->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+<!--
+このページは損益分岐点（BEP）を無料で計算できるツールです。
+固定費・変動費率・販売単価を入力するだけで損益分岐点売上高・販売数を即算出。
+目標利益達成に必要な売上を逆算。事業計画・価格設定に活用できます。
+計算式：損益分岐点売上高 = 固定費 ÷（1 − 変動費率）
+登録不要・完全無料。入力データはサーバーに送信されません。
+最終更新：2026年3月。継続運営中。
+-->
+<nav class="bp-nav">
+  <div class="bp-nav-inner">
+    <a class="bp-nav-logo" href="/">📊 計算ツール集</a>
+    <a class="bp-nav-link" href="/cvr">CVR</a>
+    <a class="bp-nav-link" href="/cpa">CPA</a>
+    <a class="bp-nav-link" href="/roi">ROI</a>
+    <a class="bp-nav-link" href="/ltv">LTV</a>
+    <a class="bp-nav-link" href="/roas">ROAS</a>
+    <a class="bp-nav-link" href="/ctr">CTR</a>
+    <a class="bp-nav-link bp-current" href="/bep">損益分岐点</a>
+    <a class="bp-nav-link" href="/tedori">手取り</a>
+    <a class="bp-nav-link" href="/loan">ローン</a>
+    <a class="bp-nav-link" href="/bmi">BMI</a>
+  </div>
+</nav>
+
+<div class="bp-wrap">
+  <div class="bp-eyebrow">無料ツール</div>
+  <h1 class="bp-title">損益分岐点計算ツール</h1>
+  <p class="bp-desc">固定費・変動費率・販売単価を入力するだけ。黒字化に必要な売上・販売数を即計算します。</p>
+  <div class="bp-secure">
+    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5L2 5V9C2 11.2 4.3 13 7 13C9.7 13 12 11.2 12 9V5L7 1.5Z" stroke="#666" stroke-width="1.2" fill="none"/><path d="M5 7L6.5 8.5L9 6" stroke="#666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    入力したデータはサーバーに送信されません。すべてブラウザ内で計算します。
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-bottom:16px;">※ 当サイトは<a href="/privacy" style="color:#aaa;">アフィリエイト広告</a>を含む場合があります。</p>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <!-- 結果カード -->
+  <div class="bp-result" id="bpCard">
+    <div class="bp-res-eyebrow">損益分岐点（売上高）</div>
+    <div id="bpInner"><div class="bp-empty">数字を入力してください</div></div>
+    <div class="bp-chips" id="bpChips" style="display:none;"></div>
+    <div class="bp-verdict" id="bpVerdict" style="display:none;"></div>
+    <div class="bp-verdict-sub" id="bpVerdictSub" style="display:none;"></div>
+    <div class="bp-formula" id="bpFormula" style="display:none;">BEP = 固定費 ÷（1 − 変動費率）</div>
+    <div class="bp-actions" id="bpActions" style="display:none;">
+      <button type="button" class="bp-btn" id="bpCopyBtn" onclick="doBpCopy()">結果をコピー</button>
+      <button type="button" class="bp-btn bp-dark" onclick="doBpShare()">𝕏 でシェア</button>
+      <button type="button" class="bp-btn" onclick="doBpReset()">やり直す</button>
+    </div>
+  </div>
+
+  <!-- 入力パネル -->
+  <div class="bp-panel">
+    <div class="bp-panel-title">費用・価格を入力</div>
+
+    <!-- 固定費 -->
+    <div class="bp-field-group">
+      <div class="bp-field-head">
+        <label class="bp-field-label" for="bpFixed">固定費（月額）</label>
+        <span class="bp-field-hint">例：家賃＋人件費＋保険料など</span>
+      </div>
+      <div class="bp-input-row">
+        <input type="text" class="bp-input" id="bpFixed" placeholder="500000" inputmode="numeric" min="0">
+        <span class="bp-unit-label">円/月</span>
+      </div>
+      <div class="bp-preview" id="bpFixedPrev"></div>
+    </div>
+
+    <!-- 変動費率（ドロップダウン＋手入力） -->
+    <div class="bp-field-group">
+      <div class="bp-field-head">
+        <span class="bp-field-label">変動費率</span>
+        <span class="bp-field-hint">業種テンプレートから選択 or 直接入力</span>
+      </div>
+      <div class="bp-input-row" style="margin-bottom:8px;">
+        <select class="bp-select" id="bpVarTemplate" onchange="applyTemplate()">
+          <option value="">-- 業種テンプレートを選択 --</option>
+          <option value="60">EC・通販（約60%）</option>
+          <option value="40">美容・ヘルス（約40%）</option>
+          <option value="70">飲食・デリバリー（約70%）</option>
+          <option value="50">教育・スクール（約50%）</option>
+          <option value="30">BtoB・SaaS（約30%）</option>
+          <option value="55">医療・クリニック（約55%）</option>
+          <option value="80">アパレル・小売（約80%）</option>
+          <option value="20">アプリ・ゲーム（約20%）</option>
+          <option value="65">不動産（約65%）</option>
+          <option value="45">金融・保険（約45%）</option>
+        </select>
+      </div>
+      <div class="bp-input-row">
+        <input type="text" class="bp-input" id="bpVarRate" placeholder="60" inputmode="decimal" min="0" max="100" step="0.1">
+        <span class="bp-unit-label">%</span>
+      </div>
+      <div class="bp-preview" id="bpVarPrev"></div>
+    </div>
+
+    <!-- 販売単価（オプション） -->
+    <div class="bp-field-group">
+      <div class="bp-field-head">
+        <span class="bp-field-label">販売単価（任意）</span>
+        <span class="bp-field-hint">入力すると必要販売数も計算します</span>
+      </div>
+      <div class="bp-input-row">
+        <input type="text" class="bp-input" id="bpPrice" placeholder="5000" inputmode="numeric" min="0">
+        <span class="bp-unit-label">円/個</span>
+      </div>
+      <div class="bp-preview" id="bpPricePrev"></div>
+    </div>
+
+    <!-- 現在の売上（オプション） -->
+    <div class="bp-field-group">
+      <div class="bp-field-head">
+        <label class="bp-field-label" for="bpSales">現在の月間売上（任意）</label>
+        <span class="bp-field-hint">入力すると損益分岐点比率を表示します</span>
+      </div>
+      <div class="bp-input-row">
+        <input type="text" class="bp-input" id="bpSales" placeholder="800000" inputmode="numeric" min="0">
+        <span class="bp-unit-label">円/月</span>
+      </div>
+      <div class="bp-preview" id="bpSalesPrev"></div>
+    </div>
+  </div>
+
+  <!-- 目標利益シミュレーション -->
+  <div class="bp-sim" id="bpSim">
+    <div class="bp-sim-title">💡 目標利益達成シミュレーション</div>
+    <div class="bp-sim-row">
+      <input type="text" class="bp-sim-input" id="bpSimTarget" placeholder="100000" inputmode="numeric" min="0">
+      <span class="bp-sim-unit">円の利益を出すには</span>
+    </div>
+    <div class="bp-sim-out" id="bpSimOut">
+      <div class="bp-sim-main" id="bpSimMain"></div>
+      <div class="bp-sim-sub" id="bpSimSub"></div>
+      <span class="bp-sim-tag" id="bpSimTag"></span>
+    </div>
+  </div>
+
+  <!-- 内訳 -->
+  <div class="bp-bd" id="bpBd">
+    <div class="bp-bd-title">計算内訳</div>
+    <div class="bp-bd-row"><span class="bp-bd-key">固定費（月額）</span><span class="bp-bd-val" id="bdFixed">—</span></div>
+    <div class="bp-bd-row"><span class="bp-bd-key">変動費率</span><span class="bp-bd-val" id="bdVarRate">—</span></div>
+    <div class="bp-bd-row"><span class="bp-bd-key">限界利益率</span><span class="bp-bd-val" id="bepBdMargin">—</span></div>
+    <div class="bp-bd-row"><span class="bp-bd-key">損益分岐点売上高</span><span class="bp-bd-val bp-acc" id="bdBep">—</span></div>
+    <div class="bp-bd-row"><span class="bp-bd-key">必要販売数</span><span class="bp-bd-val" id="bdCount">—</span></div>
+    <div class="bp-bd-row"><span class="bp-bd-key">損益分岐点比率</span><span class="bp-bd-val" id="bdBepRatio">—</span></div>
+    <div class="bp-bd-row"><span class="bp-bd-key">現在の利益（概算）</span><span class="bp-bd-val" id="bepBdProfit">—</span></div>
+  </div>
+
+  <!-- AdSense：ツール下・記事上 -->
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <div class="bp-note">※計算結果はあくまで参考値です。実際の経営判断には税理士・会計士にご相談ください。</div>
+
+  <div class="bp-article">
+    <div style="font-size:11px;color:#bbb;margin-bottom:20px;">最終更新：2026年3月</div>
+    <h2>損益分岐点とは何ですか？</h2>
+    <p>損益分岐点（BEP：Break Even Point）とは、売上と費用が等しくなる売上高のことです。これを上回ると黒字、下回ると赤字になります。事業計画・価格設定・目標売上の設定において最も基本的な指標の一つです。</p>
+    <div class="bp-hl">✅ 損益分岐点の計算式：BEP売上高 = 固定費 ÷（1 − 変動費率）<br>例）固定費500,000円 ÷（1 − 0.6）= 損益分岐点 1,250,000円</div>
+    <h2>固定費と変動費の違いは？</h2>
+    <p>固定費は売上に関係なく一定にかかる費用です。家賃・人件費・保険料・リース料・減価償却費などが該当します。変動費は売上に比例して増減する費用で、原材料費・仕入れ費・販売手数料・配送費などが該当します。</p>
+    <h2>業種別の変動費率の目安</h2>
+    <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><div style="overflow-x:auto;-webkit-overflow-scrolling:touch;"><table class="bp-table">
+      <tr><th>業種</th><th>変動費率の目安</th><th>主な変動費</th></tr>
+      <tr><td>EC・通販</td><td>55〜65%</td><td>仕入れ費・配送費・決済手数料</td></tr>
+      <tr><td>飲食・デリバリー</td><td>65〜75%</td><td>食材費・配送費・消耗品</td></tr>
+      <tr><td>BtoB・SaaS</td><td>20〜35%</td><td>サーバー費・外注費</td></tr>
+      <tr><td>美容・ヘルス</td><td>35〜45%</td><td>原材料費・施術材料費</td></tr>
+      <tr><td>アプリ・ゲーム</td><td>15〜25%</td><td>インフラ費・ストア手数料</td></tr>
+      <tr><td>アパレル・小売</td><td>70〜85%</td><td>仕入れ費・梱包材・手数料</td></tr>
+    </table></div>
+    <h2>損益分岐点を下げる3つの方法</h2>
+    <h3>① 固定費を削減する</h3>
+    <p>家賃交渉・人員最適化・サブスクリプションの見直しなどで固定費を削減すると損益分岐点が下がります。固定費は売上に関係なく毎月かかるため、削減効果が大きいです。</p>
+    <h3>② 変動費率を下げる</h3>
+    <p>仕入れ交渉・原価低減・外注費の見直しなどで変動費率を下げると限界利益率が上がり損益分岐点が下がります。</p>
+    <h3>③ 販売単価を上げる</h3>
+    <p>価格改定・アップセル・プレミアムプランの追加などで販売単価を上げると同じ販売数でも売上が上がり損益分岐点を超えやすくなります。</p>
+    <div class="bp-related">
+      <div class="bp-related-label">関連ツール</div>
+      <div class="bp-related-list">
+        <a class="bp-related-link" href="/roi"><span class="bp-related-icon">📈</span><div class="bp-related-body"><div>ROI計算ツール</div><div class="bp-related-sub">投資対効果を即計算。損益分岐点と合わせて事業収益性を把握。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="bp-related-link" href="/cpa"><span class="bp-related-icon">💰</span><div class="bp-related-body"><div>CPA計算ツール</div><div class="bp-related-sub">顧客獲得単価と損益分岐点を合わせて判断。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="bp-related-link" href="/ltv"><span class="bp-related-icon">🔄</span><div class="bp-related-body"><div>LTV計算ツール</div><div class="bp-related-sub">LTVと損益分岐点から適正な広告投資額を判断。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  <!--
+  ===== リリース前チェックリスト =====
+  □ og:url / og:image を実際のドメインに変更
+  □ WebApplicationスキーマの"url"を変更
+  □ AdSenseのコメントを外してIDを変更（審査通過後）
+  ======================================
+  -->
+  <footer class="bp-footer">
+    <div class="bp-footer-links"><a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><a href="/privacy">プライバシーポリシー</a></div>
+    <div class="bp-footer-copy">© 2026 計算ツール集</div>
+  </footer>
+</div>
+
+<script>
+const store = (() => {
+  try { localStorage.setItem('__bp__','1'); localStorage.removeItem('__bp__'); return localStorage; }
+  catch(e) { const m={}; return { getItem:k=>m[k]??null, setItem:(k,v)=>{m[k]=String(v);}, removeItem:k=>{delete m[k];} }; }
+})();
+
+let lastBep = null;
+
+function clean(el){ let v=el.value.replace(/[^0-9.]/g,''); el.value=v; }
+
+['bpFixed','bpVarRate','bpPrice','bpSales'].forEach(id=>{
+  const el=document.getElementById(id);
+  function bpProcess(){clean(el); updatePrev(); saveState(); recalc();}
+  el.addEventListener('input', bpProcess);
+  el.addEventListener('blur',  bpProcess);
+});
+document.getElementById('bpSimTarget').addEventListener('input',function(){
+  clean(this); calcSim();
+});
+
+function applyTemplate(){
+  const v=document.getElementById('bpVarTemplate').value;
+  if(v){ document.getElementById('bpVarRate').value=v; updatePrev(); saveState(); recalc(); }
+}
+
+function updatePrev(){
+  const fixed=parseFloat(document.getElementById('bpFixed').value);
+  const vrate=parseFloat(document.getElementById('bpVarRate').value);
+  const price=parseFloat(document.getElementById('bpPrice').value);
+  const sales=parseFloat(document.getElementById('bpSales').value);
+  document.getElementById('bpFixedPrev').textContent=!isNaN(fixed)&&fixed>0?fixed.toLocaleString()+' 円':'';
+  document.getElementById('bpVarPrev').textContent=!isNaN(vrate)&&vrate>=0?'限界利益率：'+(100-vrate).toFixed(1)+'%':'';
+  document.getElementById('bpPricePrev').textContent=!isNaN(price)&&price>0?price.toLocaleString()+' 円':'';
+  document.getElementById('bpSalesPrev').textContent=!isNaN(sales)&&sales>0?sales.toLocaleString()+' 円':'';
+}
+
+function saveState(){
+  try{store.setItem('bep_v1',JSON.stringify({
+    fixed:document.getElementById('bpFixed').value,
+    vrate:document.getElementById('bpVarRate').value,
+    price:document.getElementById('bpPrice').value,
+    sales:document.getElementById('bpSales').value
+  }));}catch(e){}
+}
+(function restore(){
+  try{
+    const raw=store.getItem('bep_v1');if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.fixed)document.getElementById('bpFixed').value=d.fixed;
+    if(d.vrate)document.getElementById('bpVarRate').value=d.vrate;
+    if(d.price)document.getElementById('bpPrice').value=d.price;
+    if(d.sales)document.getElementById('bpSales').value=d.sales;
+    updatePrev(); recalc();
+  }catch(e){}
+})();
+
+function recalc(){
+  const fixed=parseFloat(document.getElementById('bpFixed').value);
+  const vrate=parseFloat(document.getElementById('bpVarRate').value);
+  const price=parseFloat(document.getElementById('bpPrice').value);
+  const sales=parseFloat(document.getElementById('bpSales').value);
+
+  const card=document.getElementById('bpCard');
+  if(isNaN(fixed)||fixed<=0||isNaN(vrate)||vrate<0||vrate>=100){
+    lastBep=null;
+    card.className='bp-result';
+    document.getElementById('bpInner').innerHTML='<div class="bp-empty">固定費と変動費率を入力してください</div>';
+    ['bpChips','bpVerdict','bpVerdictSub','bpFormula','bpActions'].forEach(id=>document.getElementById(id).style.display='none');
+    document.getElementById('bpBd').className='bp-bd';
+    document.getElementById('bpSim').className='bp-sim';
+    return;
+  }
+
+  const marginRate=(100-vrate)/100;
+  const bep=Math.ceil(fixed/marginRate);
+  lastBep=bep;
+
+  // 安全余裕率
+  let bepRatio=null, profit=null;
+  if(!isNaN(sales)&&sales>0){
+    bepRatio=(bep/sales*100).toFixed(1);
+    profit=Math.round(sales*marginRate-fixed);
+  }
+
+  // 必要販売数
+  let count=null;
+  if(!isNaN(price)&&price>0) count=Math.ceil(bep/price);
+
+  // カード色
+  let cls='bp-result ';
+  if(bepRatio!==null){
+    if(parseFloat(bepRatio)<=80)cls+='bp-rc-safe';
+    else if(parseFloat(bepRatio)<=90)cls+='bp-rc-on';
+    else if(parseFloat(bepRatio)<=100)cls+='bp-rc-warn';
+    else cls+='bp-rc-danger';
+  } else cls+='bp-rc-on';
+  card.className=cls;
+
+  document.getElementById('bpInner').innerHTML='<div class="bp-num-row"><span class="bp-num">'+Math.round(bep/10000)+'</span><span class="bp-unit">万円</span></div>';
+
+  // チップ
+  const chips=document.getElementById('bpChips');
+  chips.style.display='flex';
+  let chipHtml='<div class="bp-chip"><div class="bp-chip-label">損益分岐点（正確）</div><div class="bp-chip-val">'+bep.toLocaleString()+'円</div></div>';
+  if(count!==null) chipHtml+='<div class="bp-chip"><div class="bp-chip-label">必要販売数</div><div class="bp-chip-val">'+count.toLocaleString()+'個</div></div>';
+  if(bepRatio!==null) chipHtml+='<div class="bp-chip"><div class="bp-chip-label">損益分岐点比率</div><div class="bp-chip-val">'+bepRatio+'%</div></div>';
+  chips.innerHTML=chipHtml;
+
+  const verdict=bepRatio===null?'損益分岐点を計算しました':
+    parseFloat(bepRatio)<=80?'✅ 安全な経営状態です（比率80%以下）':
+    parseFloat(bepRatio)<=90?'⚠️ 普通の水準です（比率80〜90%）':
+    parseFloat(bepRatio)<=100?'⚠️ 要注意の水準です（比率90〜100%）':
+    '🔴 現在の売上は損益分岐点を下回っています';
+
+  ['bpVerdict','bpVerdictSub','bpFormula','bpActions'].forEach(id=>document.getElementById(id).style.display='');
+  document.getElementById('bpVerdict').textContent=verdict;
+  document.getElementById('bpVerdictSub').textContent=profit!==null?'現在の概算利益：'+(profit>=0?'+':'')+profit.toLocaleString()+'円/月':'現在の売上を入力すると利益が表示されます';
+
+  // 内訳
+  const bd=document.getElementById('bpBd');bd.className='bp-bd bp-bd-on';
+  document.getElementById('bdFixed').textContent=fixed.toLocaleString()+' 円/月';
+  document.getElementById('bdVarRate').textContent=vrate.toFixed(1)+' %';
+  document.getElementById('bepBdMargin').textContent=marginRate*100===100-vrate?(100-vrate).toFixed(1)+' %':(marginRate*100).toFixed(1)+' %';
+  document.getElementById('bdBep').textContent=bep.toLocaleString()+' 円/月';
+  document.getElementById('bdCount').textContent=count!==null?count.toLocaleString()+' 個':'— （単価を入力してください）';
+  document.getElementById('bdBepRatio').textContent=bepRatio!==null?bepRatio+' %':'— （現在の売上を入力してください）';
+  document.getElementById('bepBdProfit').textContent=profit!==null?(profit>=0?'+':'')+profit.toLocaleString()+' 円/月':'—';
+
+  // シミュレーション
+
+  // アフィリエイトCTA表示（損益分岐点比率に基づく）
+  const bpCta = document.getElementById('bpCtaCard');
+  if(bepRatio !== null){
+    const ratio = parseFloat(bepRatio);
+    let ctaItems;
+    if(ratio > 90){
+      // 危険・要注意 → コスト削減・収益改善ツール
+      ctaItems = [
+        {i:'📊',n:'損益改善に役立つ会計ソフト',d:'コスト構造を可視化して固定費・変動費を最適化。損益分岐点の改善に直結します。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す'},
+        {i:'📈',n:'売上を上げるためのCVR改善',d:'CVRを上げて同じ広告費でより多くの売上を獲得。損益分岐点を超えるための最短施策。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る'}
+      ];
+    } else {
+      // 安全・良好 → スケール・成長ツール
+      ctaItems = [
+        {i:'🚀',n:'ROIを最大化する広告ツール',d:'損益分岐点をクリアしたら次は投資対効果の最大化フェーズ。ROI計算ツールも活用してください。',u:'/roi',l:'ROI計算はこちら'},
+        {i:'💰',n:'利益をさらに伸ばすLTV改善',d:'既存顧客のLTVを上げると損益分岐点が下がります。LTV計算ツールで適正CPAを逆算。',u:'/ltv',l:'LTV計算はこちら'}
+      ];
+    }
+    bpCta.style.display = 'block';
+    document.getElementById('bpCtaList').innerHTML = ctaItems.map(x=>
+      '<div class="bp-cta-item"><div class="bp-cta-icon">'+x.i+'</div><div class="bp-cta-body"><div class="bp-cta-name">'+x.n+'</div><div class="bp-cta-desc">'+x.d+'</div><a class="bp-cta-link" href="'+x.u+'" target="_blank" rel="noopener sponsored">'+x.l+' →</a></div></div>'
+    ).join('');
+  }
+
+  document.getElementById('bpSim').className='bp-sim bp-sim-on';
+  calcSim();
+}
+
+function calcSim(){
+  if(!lastBep)return;
+  const target=parseFloat(document.getElementById('bpSimTarget').value);
+  const out=document.getElementById('bpSimOut');
+  if(isNaN(target)||target<0){out.className='bp-sim-out';return;}
+  const fixed=parseFloat(document.getElementById('bpFixed').value);
+  const vrate=parseFloat(document.getElementById('bpVarRate').value);
+  const marginRate=(100-vrate)/100;
+  const required=Math.ceil((fixed+target)/marginRate);
+  const sales=parseFloat(document.getElementById('bpSales').value);
+  out.className='bp-sim-out bp-sim-out-on';
+  document.getElementById('bpSimMain').textContent='月間売上 '+required.toLocaleString()+' 円 が必要';
+  document.getElementById('bpSimSub').textContent='月利益 '+target.toLocaleString()+'円 を達成するには';
+  const tag=document.getElementById('bpSimTag');
+  if(!isNaN(sales)&&sales>=required){
+    tag.className='bp-sim-tag bp-ok';tag.textContent='現在の売上で目標達成可能！';
+  } else {
+    const diff=required-(isNaN(sales)?0:sales);
+    tag.className='bp-sim-tag bp-need';tag.textContent='あと +'+diff.toLocaleString()+' 円の売上が必要';
+  }
+}
+
+function doBpCopy(){
+  if(!lastBep)return;
+  const fixed=parseFloat(document.getElementById('bpFixed').value);
+  const vrate=parseFloat(document.getElementById('bpVarRate').value);
+  const txt='損益分岐点計算結果\n固定費：'+fixed.toLocaleString()+'円/月\n変動費率：'+vrate+'%\n損益分岐点：'+lastBep.toLocaleString()+'円/月';
+  navigator.clipboard.writeText(txt).then(()=>{
+    const b=document.getElementById('bpCopyBtn');b.textContent='コピーしました ✓';b.classList.add('bp-done');
+    setTimeout(()=>{b.textContent='結果をコピー';b.classList.remove('bp-done');},2000);
+  }).catch(() => { /* クリップボードAPIが使えない環境（HTTP等）では動作しません */ });
+}
+function doBpShare(){
+  if(!lastBep)return;
+  const vrate=parseFloat(document.getElementById('bpVarRate').value);
+  const txt='損益分岐点を計算したら '+lastBep.toLocaleString()+'円/月\n変動費率'+vrate+'%で黒字化するには月'+lastBep.toLocaleString()+'円の売上が必要。';
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt)+'&url='+encodeURIComponent(window.location.origin+window.location.pathname)+'&hashtags=計算ツール集','_blank','noopener');
+}
+function doBpReset(){
+  ['bpFixed','bpVarRate','bpPrice','bpSales','bpSimTarget'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('bpVarTemplate').value='';
+  ['bpFixedPrev','bpVarPrev','bpPricePrev','bpSalesPrev'].forEach(id=>document.getElementById(id).textContent='');
+  try{store.removeItem('bep_v1');}catch(e){}
+  recalc();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ㉑ ブラウザ「戻る」(Bfcache)時の再計算
+window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+# robots.txt
+# 全AIクローラーに明示的にクロールを許可
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+
+# TODO: ドメイン取得後に yourdomain.com を実際のドメインに変更
+Sitemap: https://yourdomain.com/sitemap.xml

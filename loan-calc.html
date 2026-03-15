@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ローン計算ツール | 月々の返済額を無料で即計算 | 計算ツール集</title>
+<meta name="description" content="住宅ローン・カードローンの月々返済額を無料で即計算。月返済額＝借入額×月利×(1+月利)^N÷((1+月利)^N-1)。総返済額・利息総額・返済スケジュール表付き。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourdomain.com/loan">
+<meta property="og:title" content="ローン計算ツール | 月々の返済額を無料で即計算">
+<meta property="og:description" content="ローンの月々の返済額を無料で即計算。総返済額・利息総額・返済スケジュール表付き。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/loan">
+<meta property="og:image" content="https://yourdomain.com/ogp-loan.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ローン計算ツール | 月々の返済額を無料で即計算">
+<meta name="twitter:description" content="ローンの月々の返済額を無料で即計算。総返済額・利息総額付き。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "計算ツール集",
+      "item": "https://yourdomain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ローン計算ツール",
+      "item": "https://yourdomain.com/loan"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "ローン計算ツール",
+  "url": "https://yourdomain.com/loan",
+  "description": "住宅ローン・カーローン・カードローンの月々の返済額を無料で計算。総返済額・利息総額・返済スケジュール表付き。",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "dateModified": "2026-03-15"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "住宅ローンの月々の返済額はどう計算しますか？", "acceptedAnswer": { "@type": "Answer", "text": "元利均等返済の月々の返済額 = 借入金額 × 月利 × (1+月利)^返済回数 ÷ ((1+月利)^返済回数 - 1) で計算します。月利は年利÷12です。" } },
+    { "@type": "Question", "name": "住宅ローン3,000万円を35年・年利1%で借りると月々の返済額はいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "借入3,000万円・年利1%・35年（420回）の元利均等返済の月々の返済額は約84,686円です。総返済額は約3,556万円、利息総額は約556万円になります。" } },
+    { "@type": "Question", "name": "元利均等返済と元金均等返済の違いは？", "acceptedAnswer": { "@type": "Answer", "text": "元利均等返済は毎月の返済額が一定で家計管理がしやすいですが、総利息が多くなります。元金均等返済は毎月の元金返済額が一定で、返済が進むにつれ月々の返済額が減り、総利息が少なくなります。" } },
+    { "@type": "Question", "name": "繰り上げ返済すると利息はどのくらい減りますか？", "acceptedAnswer": { "@type": "Answer", "text": "繰り上げ返済の効果は、早い時期ほど大きくなります。住宅ローンの場合、返済開始10年以内に100万円繰り上げ返済すると、100万円以上の利息が減ることもあります。" } },
+    { "@type": "Question", "name": "このローン計算ツールは無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、完全無料で使えます。登録不要でご利用いただけます。入力したデータはサーバーに送信されず、すべてブラウザ内で計算します。" } }
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif; background: #f4f5f7; min-height: 100vh; padding: 0 0 80px; font-size: 16px; line-height: 1.6; color: #111; }
+  .ln-nav { background: #fff; border-bottom: 1px solid #e4e4e4; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+  .ln-nav-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; scrollbar-width: none; }
+  .ln-nav-inner::-webkit-scrollbar { display: none; }
+  .ln-nav-logo { font-size: 13px; font-weight: 800; color: #555; text-decoration: none; white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
+  .ln-nav-link { display: flex; align-items: center; height: 48px; padding: 0 12px; font-size: 12px; font-weight: 600; color: #888; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; flex-shrink: 0; }
+  .ln-nav-link:hover { color: #444; }
+  .ln-nav-link.ln-current { color: #444; border-bottom-color: #444; }
+  .ln-nav-link.ln-disabled { color: #ccc; cursor: default; }
+  .ln-badge { font-size: 9px; font-weight: 700; background: #eee; color: #bbb; padding: 1px 5px; border-radius: 4px; margin-left: 4px; }
+  .ln-wrap { width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 16px 0; }
+  .ln-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #666; margin-bottom: 8px; }
+  .ln-title { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 6px; line-height: 1.3; }
+  .ln-desc { font-size: 13px; color: #777; margin-bottom: 10px; line-height: 1.6; }
+  .ln-secure { display: inline-flex; align-items: center; gap: 6px; background: #f8f8f8; border: 1px solid #e0e0e0; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #666; font-weight: 600; margin-bottom: 24px; }
+  .ln-result { background: #2c2c2c; border-radius: 20px; padding: 28px 24px; margin-bottom: 20px; transition: background 0.3s; }
+  .ln-result.ln-rc-on { background: linear-gradient(135deg, #1c3a5c 0%, #0f2238 100%); }
+  .ln-res-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; text-align: center; }
+  .ln-num-row { display: flex; align-items: flex-end; justify-content: center; gap: 4px; line-height: 1; margin-bottom: 8px; }
+  .ln-num { font-size: 56px; font-weight: 800; color: #fff; letter-spacing: -2px; }
+  .ln-unit { font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.6); padding-bottom: 6px; }
+  .ln-empty { font-size: 15px; color: rgba(255,255,255,0.2); padding: 20px 0; text-align: center; }
+  .ln-chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+  .ln-chip { background: rgba(255,255,255,0.1); border-radius: 10px; padding: 10px 14px; text-align: center; flex: 1; min-width: 100px; }
+  .ln-chip-label { font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-bottom: 4px; }
+  .ln-chip-val { font-size: 15px; font-weight: 800; color: #fff; }
+  .ln-formula { font-size: 11px; color: rgba(255,255,255,0.2); font-family: monospace; text-align: center; }
+  .ln-actions { display: flex; gap: 7px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  .ln-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 500; padding: 9px 14px; cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; min-height: 44px; display: flex; align-items: center; gap: 5px; -webkit-tap-highlight-color: transparent; }
+  .ln-btn:hover { background: rgba(255,255,255,0.18); }
+  .ln-btn.ln-done { background: rgba(255,255,255,0.22); color: #fff; }
+  .ln-btn.ln-dark { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1); }
+  .ln-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .ln-panel-title { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 0.04em; margin-bottom: 16px; }
+  .ln-field { margin-bottom: 18px; }
+  .ln-field:last-child { margin-bottom: 0; }
+  .ln-field-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .ln-field-label { font-size: 13px; font-weight: 700; color: #333; }
+  .ln-field-hint { font-size: 11px; color: #bbb; }
+  .ln-input-row { display: flex; gap: 8px; align-items: center; }
+  .ln-input { flex: 1; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 20px; font-weight: 700; color: #111; outline: none; transition: border-color 0.15s; min-height: 52px; -webkit-appearance: none; background: #fff; }
+  .ln-input::-webkit-inner-spin-button, .ln-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .ln-input:focus { border-color: #666; }
+  .ln-unit-lbl { font-size: 14px; font-weight: 600; color: #aaa; flex-shrink: 0; }
+  .ln-select { width: 100%; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 15px; font-weight: 600; color: #444; background: #f8f8f8; outline: none; cursor: pointer; min-height: 52px; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+  .ln-select:focus { border-color: #666; }
+  .ln-preview { font-size: 12px; color: #bbb; margin-top: 5px; min-height: 16px; }
+  /* 返済スケジュール表 */
+  .ln-cta { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; border: 1.5px solid #e4e4e4; display: none; }
+  .ln-cta-hd { font-size: 11px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .ln-cta-item { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid #f2f2f2; }
+  .ln-cta-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .ln-cta-ico { width: 40px; height: 40px; border-radius: 10px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .ln-cta-body { flex: 1; }
+  .ln-cta-name { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .ln-cta-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
+  .ln-cta-link { display: inline-flex; align-items: center; gap: 4px; background: #444; color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-decoration: none; min-height: 36px; }
+  .ln-cta-link:hover { background: #222; }
+  .ln-cta-foot { font-size: 10px; color: #ccc; margin-top: 10px; text-align: center; }
+  .ln-sched { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; display: none;  overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .ln-sched.ln-sched-on { display: block; }
+  .ln-sched-title { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .ln-sched-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .ln-sched-table th { background: #f4f4f2; padding: 8px 10px; text-align: right; font-weight: 700; color: #555; border-bottom: 2px solid #e8e8e8; font-size: 11px; }
+  .ln-sched-table th:first-child { text-align: left; }
+  .ln-sched-table td { padding: 7px 10px; border-bottom: 1px solid #f2f2f2; color: #444; text-align: right; }
+  .ln-sched-table td:first-child { text-align: left; color: #888; }
+  .ln-sched-note { font-size: 11px; color: #bbb; margin-top: 8px; }
+  .ln-article { background: #fff; border-radius: 14px; padding: 28px; margin-top: 8px; }
+  .ln-article h2 { font-size: 18px; font-weight: 700; color: #111; margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; line-height: 1.4; }
+  .ln-article h2:first-of-type { margin-top: 0; }
+  .ln-article h3 { font-size: 15px; font-weight: 700; color: #333; margin: 20px 0 8px; }
+  .ln-article p { font-size: 14px; color: #444; line-height: 1.9; margin-bottom: 14px; }
+  .ln-article p:last-child { margin-bottom: 0; }
+  .ln-hl { background: #f4f4f4; border-left: 3px solid #666; border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #333; line-height: 1.8; }
+  .ln-related { margin-top: 24px; padding-top: 20px; border-top: 2px solid #f0f0f0; }
+  .ln-related-label { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .ln-related-list { display: flex; flex-direction: column; gap: 8px; }
+  .ln-related-link { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #f8f8f8; border-radius: 10px; text-decoration: none; color: #333; font-size: 13px; font-weight: 600; transition: background 0.15s; }
+  .ln-related-link:hover { background: #f0f0f0; }
+  .ln-related-icon { font-size: 16px; flex-shrink: 0; }
+  .ln-related-body { flex: 1; }
+  .ln-related-sub { font-size: 11px; color: #aaa; font-weight: 400; margin-top: 1px; }
+  .ln-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e4e4e4; text-align: center; }
+  .ln-footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
+  .ln-footer-links a { font-size: 12px; color: #999; text-decoration: none; }
+  .ln-footer-links a:hover { color: #444; }
+  .ln-footer-copy { font-size: 11px; color: #bbb; }
+  .ln-note { font-size: 11px; color: #bbb; text-align: center; line-height: 1.7; margin-top: 14px; }
+  @media (max-width: 600px) { .ln-title { font-size: 22px; } .ln-num { font-size: 44px; } .ln-article { padding: 20px 16px; } }
+
+
+  .ln-input::placeholder { color: #aaa; }
+  /* ===== 印刷・PDF保存用スタイル ===== */
+  @media print {
+    .ln-nav,
+    footer,
+    .ln-cta {
+      display: none !important;
+    }
+    .ln-result {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: none !important;
+      border: 1px solid #ccc !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .ln-result * {
+      color: #111 !important;
+    }
+    body {
+      background: #fff !important;
+    }
+    .ln-wrap {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  /* スマホのタップ後hover残りバグ防止 */
+  @media (hover: none) {
+    a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
+  }
+</style>
+<!-- Google Analytics（GA4） ※リリース後にIDを設定 -->
+<!-- 設定方法: G-XXXXXXXXXX をご自身の測定IDに書き換えてコメントを外す -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:site_name" content="計算ツール集">
+<!-- Google AdSense（審査通過後にコメントを外してIDを設定）-->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+<!--
+このページはローンの月々の返済額を無料で計算できるツールです。
+借入金額・年利・返済期間を入力するだけで月々の返済額を即算出。
+総返済額・利息総額・元利均等/元金均等の比較・返済スケジュール表付き。
+住宅ローン・マイカーローン・カードローン・フリーローンに対応。
+登録不要・完全無料。入力データはサーバーに送信されません。
+最終更新：2026年3月。継続運営中。
+-->
+<nav class="ln-nav">
+  <div class="ln-nav-inner">
+    <a class="ln-nav-logo" href="/">📊 計算ツール集</a>
+    <a class="ln-nav-link" href="/cvr">CVR</a>
+    <a class="ln-nav-link" href="/cpa">CPA</a>
+    <a class="ln-nav-link" href="/roi">ROI</a>
+    <a class="ln-nav-link" href="/ltv">LTV</a>
+    <a class="ln-nav-link" href="/roas">ROAS</a>
+    <a class="ln-nav-link" href="/ctr">CTR</a>
+    <a class="ln-nav-link" href="/bep">損益分岐点</a>
+    <a class="ln-nav-link" href="/tedori">手取り</a>
+    <a class="ln-nav-link ln-current" href="/loan">ローン</a>
+    <a class="ln-nav-link" href="/bmi">BMI</a>
+  </div>
+</nav>
+<div class="ln-wrap">
+  <div class="ln-eyebrow">無料ツール</div>
+  <h1 class="ln-title">ローン計算ツール</h1>
+  <p class="ln-desc">借入金額・年利・返済期間を入力するだけ。月々の返済額・総返済額・利息総額を即計算します。</p>
+  <div class="ln-secure">
+    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5L2 5V9C2 11.2 4.3 13 7 13C9.7 13 12 11.2 12 9V5L7 1.5Z" stroke="#666" stroke-width="1.2" fill="none"/><path d="M5 7L6.5 8.5L9 6" stroke="#666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    入力したデータはサーバーに送信されません。すべてブラウザ内で計算します。
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-bottom:16px;">※ 当サイトは<a href="/privacy" style="color:#aaa;">アフィリエイト広告</a>を含む場合があります。</p>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <div class="ln-result" id="lnCard">
+    <div class="ln-res-eyebrow">月々の返済額（元利均等）</div>
+    <div id="lnInner"><div class="ln-empty">数字を入力してください</div></div>
+    <div class="ln-chips" id="lnChips" style="display:none;"></div>
+    <div class="ln-formula" id="lnFormula" style="display:none;">月返済額 = 借入額 × 月利 × (1+月利)^N ÷ ((1+月利)^N − 1)</div>
+    <div class="ln-actions" id="lnActions" style="display:none;">
+      <button type="button" class="ln-btn" id="lnCopyBtn" onclick="doLnCopy()">結果をコピー</button>
+      <button type="button" class="ln-btn ln-dark" onclick="doLnShare()">𝕏 でシェア</button>
+      <button type="button" class="ln-btn" onclick="doLnReset()">やり直す</button>
+    </div>
+  </div>
+
+  <div class="ln-panel">
+    <div class="ln-panel-title">ローン条件を入力</div>
+    <div class="ln-field">
+      <div class="ln-field-head"><span class="ln-field-label">ローンの種類</span></div>
+      <select class="ln-select" id="lnType" onchange="applyLoanType()">
+        <option value="">-- 種類から金利の目安を選択 --</option>
+        <option value="0.6">住宅ローン 変動金利（0.6%目安）</option>
+        <option value="1.5">住宅ローン 固定金利（1.5%目安）</option>
+        <option value="1.9">フラット35（1.9%目安）</option>
+        <option value="3.0">マイカーローン（3.0%目安）</option>
+        <option value="4.5">フリーローン（4.5%目安）</option>
+        <option value="14.0">カードローン（14%目安）</option>
+        <option value="18.0">消費者金融（18%目安）</option>
+      </select>
+    </div>
+    <div class="ln-field">
+      <div class="ln-field-head"><label class="ln-field-label" for="lnAmount">借入金額</label><span class="ln-field-hint">例：30,000,000</span></div>
+      <div class="ln-input-row">
+        <input type="text" class="ln-input" id="lnAmount" placeholder="30000000" inputmode="numeric" min="0">
+        <span class="ln-unit-lbl">円</span>
+      </div>
+      <div class="ln-preview" id="lnAmountPrev"></div>
+    </div>
+    <div class="ln-field">
+      <div class="ln-field-head"><label class="ln-field-label" for="lnRate">年利（金利）</label><span class="ln-field-hint">例：1.0</span></div>
+      <div class="ln-input-row">
+        <input type="text" class="ln-input" id="lnRate" placeholder="1.0" inputmode="decimal" min="0" max="100" step="0.1">
+        <span class="ln-unit-lbl">%</span>
+      </div>
+    </div>
+    <div class="ln-field">
+      <div class="ln-field-head"><span class="ln-field-label">返済期間</span></div>
+      <select class="ln-select" id="lnYears" onchange="saveState();recalc();">
+        <option value="1">1年（12回）</option>
+        <option value="3">3年（36回）</option>
+        <option value="5">5年（60回）</option>
+        <option value="7">7年（84回）</option>
+        <option value="10">10年（120回）</option>
+        <option value="15">15年（180回）</option>
+        <option value="20">20年（240回）</option>
+        <option value="25">25年（300回）</option>
+        <option value="30">30年（360回）</option>
+        <option value="35" selected>35年（420回）</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- AdSense：ツール下・記事上 -->
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <!-- アフィリエイトCTA -->
+  <div class="ln-cta" id="lnCtaCard">
+    <div class="ln-cta-hd">PR・おすすめサービス</div>
+    <div id="lnCtaList"></div>
+    <p class="ln-cta-foot">※ 当サイトはアフィリエイト広告を含む場合があります</p>
+  </div>
+
+  <!-- 返済スケジュール（先頭12ヶ月） -->
+  <div class="ln-sched" id="lnSched">
+    <div class="ln-sched-title">📅 返済スケジュール（先頭12ヶ月）</div>
+    <table class="ln-sched-table">
+      <tr><th>月</th><th>返済額</th><th>元金</th><th>利息</th><th>残高</th></tr>
+      <tbody id="lnSchedBody"></tbody>
+    </table>
+    <div class="ln-sched-note">※元利均等返済方式。実際の返済額は金融機関の計算方法により異なる場合があります。</div>
+  </div>
+
+  <div class="ln-note">※計算結果は概算です。実際の返済額は金融機関の計算方式・端数処理・諸費用により異なります。ローン契約前に必ず金融機関にご確認ください。実際のローン条件は金融機関にご確認ください。</div>
+
+  <div class="ln-article">
+    <div style="font-size:11px;color:#bbb;margin-bottom:20px;">最終更新：2026年3月</div>
+    <h2>ローンの月々の返済額はどう計算しますか？</h2>
+    <p>最も一般的な返済方式「元利均等返済（毎月の返済額が一定）」の計算式は次のとおりです。</p>
+    <div class="ln-hl">月返済額 = 借入額 × 月利 × (1+月利)^N ÷ ((1+月利)^N − 1)<br>月利 = 年利 ÷ 12　N = 返済回数（返済期間×12）<br>例）借入3,000万円・年利1%・35年 → 月84,686円</div>
+    <p>金利が0.5%変わるだけで総返済額が数十〜数百万円変わります。住宅ローンを検討する際は複数の金融機関の金利を比較することが重要です。</p>
+
+    <h2>住宅ローンの相場と目安</h2>
+    <p>2026年現在、変動金利型住宅ローンは年0.3〜1.0%程度、固定金利（10年）は年1.5〜2.0%程度、フラット35（全期間固定）は年1.7〜2.0%程度が目安です。変動金利は将来的に金利が上昇するリスクがある一方、低金利時は返済額を抑えられます。</p>
+    <p>一般的に無理のない住宅ローン返済額の目安は「年収の25%以内」とされています。年収600万円なら月々の返済額を12.5万円以内に抑えるのが安全とされます。</p>
+
+    <h2>元利均等返済と元金均等返済の違い</h2>
+    <p>元利均等返済は毎月の返済額が一定のため家計管理がしやすいですが、返済初期は利息の割合が高く元金の減りが遅いです。総返済額は元金均等より多くなります。元金均等返済は毎月の元金返済額が一定で、返済が進むほど月々の返済額が減り総利息が少なくなりますが、返済初期の負担が大きくなります。</p>
+
+    <h2>繰り上げ返済の効果は？</h2>
+    <p>繰り上げ返済は残っているローンを一括で前払いすることで、将来払うはずだった利息を大幅に減らせます。特に返済開始から10年以内の早い時期に繰り上げ返済するほど効果が大きくなります。住宅ローン残高2,000万円・年利1%・残期間25年の時点で100万円繰り上げ返済すると、利息削減効果は約15〜20万円になります。</p>
+
+    <h2>カードローン・消費者金融の注意点</h2>
+    <p>カードローン（年利14%前後）や消費者金融（年利18%程度）は住宅ローンと比べて金利が非常に高く、100万円を3年で返済する場合の総利息は住宅ローンの20〜50倍以上になります。緊急時以外はなるべく利用を避け、利用する場合は早期完済を心がけることが重要です。</p>
+
+    <h2>ローンを借りる前に確認すべきこと</h2>
+    <ul>
+      <li>金利の種類（変動・固定）とそれぞれのリスク</li>
+      <li>繰り上げ返済手数料の有無</li>
+      <li>保証料・事務手数料などの諸費用</li>
+      <li>団体信用生命保険（団信）の内容</li>
+      <li>返済比率（年収に対する年間返済額の割合）</li>
+    </ul>
+    <div class="ln-related">
+      <div class="ln-related-label">関連ツール</div>
+      <div class="ln-related-list">
+        <a class="ln-related-link" href="/tedori"><span class="ln-related-icon">💴</span><div class="ln-related-body"><div>手取り計算ツール</div><div class="ln-related-sub">手取りと月々のローン返済額を比較して返済能力を確認。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="ln-related-link" href="/bep"><span class="ln-related-icon">📊</span><div class="ln-related-body"><div>損益分岐点計算ツール</div><div class="ln-related-sub">事業資金のローンと損益分岐点を合わせて判断。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="ln-related-link" href="/roi"><span class="ln-related-icon">📈</span><div class="ln-related-body"><div>ROI計算ツール</div><div class="ln-related-sub">投資目的のローンの費用対効果を計算。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  <!--
+  ===== リリース前チェックリスト =====
+  □ og:url / og:image を実際のドメインに変更
+  □ WebApplicationスキーマの"url"を変更
+  □ AdSenseのコメントを外してIDを変更（審査通過後）
+  ======================================
+  -->
+  <footer class="ln-footer">
+    <div class="ln-footer-links"><a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><a href="/privacy">プライバシーポリシー</a></div>
+    <div class="ln-footer-copy">© 2026 計算ツール集</div>
+  </footer>
+</div>
+<script>
+const store=(()=>{try{localStorage.setItem('__ln__','1');localStorage.removeItem('__ln__');return localStorage;}catch(e){const m={};return{getItem:k=>m[k]??null,setItem:(k,v)=>{m[k]=String(v);},removeItem:k=>{delete m[k];}}}})();
+let lastResult=null;
+
+function applyLoanType(){
+  const v=document.getElementById('lnType').value;
+  if(v){document.getElementById('lnRate').value=v;saveState();recalc();}
+}
+['lnAmount','lnRate'].forEach(id=>{
+  const el=document.getElementById(id);
+  function lnProcess(){
+    el.value=el.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1');
+    if(id==='lnAmount')document.getElementById('lnAmountPrev').textContent=parseFloat(el.value)>0?parseFloat(el.value).toLocaleString()+' 円':'';
+    saveState();recalc();
+  }
+  el.addEventListener('input', lnProcess);
+  el.addEventListener('blur',  lnProcess);
+});
+document.getElementById('lnYears').addEventListener('change',()=>{saveState();recalc();});
+
+function saveState(){
+  try{store.setItem('loan_v1',JSON.stringify({
+    amount:document.getElementById('lnAmount').value,
+    rate:document.getElementById('lnRate').value,
+    years:document.getElementById('lnYears').value
+  }));}catch(e){}
+}
+(function restore(){
+  try{
+    const raw=store.getItem('loan_v1');if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.amount){document.getElementById('lnAmount').value=d.amount;document.getElementById('lnAmountPrev').textContent=parseFloat(d.amount).toLocaleString()+' 円';}
+    if(d.rate)document.getElementById('lnRate').value=d.rate;
+    if(d.years)document.getElementById('lnYears').value=d.years;
+    recalc();
+  }catch(e){}
+})();
+
+function recalc(){
+  const amount=parseFloat(document.getElementById('lnAmount').value);
+  const rateY=parseFloat(document.getElementById('lnRate').value);
+  const years=parseInt(document.getElementById('lnYears').value)||35;
+  const card=document.getElementById('lnCard');
+
+  if(isNaN(amount)||amount<=0||isNaN(rateY)||rateY<0){
+    lastResult=null;
+    card.className='ln-result';
+    document.getElementById('lnInner').innerHTML='<div class="ln-empty">借入金額と金利を入力してください</div>';
+    ['lnChips','lnFormula','lnActions'].forEach(id=>document.getElementById(id).style.display='none');
+    document.getElementById('lnSched').className='ln-sched';
+    return;
+  }
+
+  const n=years*12;
+  let monthly;
+  if(rateY===0){
+    monthly=amount/n;
+  } else {
+    const r=rateY/100/12;
+    monthly=amount*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  }
+  const totalRepay=monthly*n;
+  const totalInterest=totalRepay-amount;
+
+  lastResult={amount,rateY,years,monthly,totalRepay,totalInterest};
+  card.className='ln-result ln-rc-on';
+  document.getElementById('lnInner').innerHTML=
+    '<div class="ln-num-row"><span class="ln-num">'+Math.round(monthly).toLocaleString()+'</span><span class="ln-unit">円/月</span></div>';
+
+  const chips=document.getElementById('lnChips');
+  chips.style.display='flex';
+  chips.innerHTML=
+    '<div class="ln-chip"><div class="ln-chip-label">総返済額</div><div class="ln-chip-val">'+Math.round(totalRepay/10000)+'万円</div></div>'+
+    '<div class="ln-chip"><div class="ln-chip-label">利息総額</div><div class="ln-chip-val">'+Math.round(totalInterest/10000)+'万円</div></div>'+
+    '<div class="ln-chip"><div class="ln-chip-label">返済期間</div><div class="ln-chip-val">'+years+'年</div></div>';
+
+  ['lnFormula','lnActions'].forEach(id=>document.getElementById(id).style.display='');
+
+  // スケジュール表（先頭12ヶ月）
+  const sched=document.getElementById('lnSched');
+  sched.className='ln-sched ln-sched-on';
+  const tbody=document.getElementById('lnSchedBody');
+  tbody.innerHTML='';
+  let balance=amount;
+  const r=rateY/100/12;
+  for(let i=1;i<=Math.min(12,n);i++){
+    const interest=Math.round(balance*r);
+    const principal=Math.round(monthly)-interest;
+    balance=Math.max(0,balance-principal);
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td>'+i+'ヶ月目</td><td>'+Math.round(monthly).toLocaleString()+'円</td><td>'+principal.toLocaleString()+'円</td><td>'+interest.toLocaleString()+'円</td><td>'+Math.round(balance).toLocaleString()+'円</td>';
+    tbody.appendChild(tr);
+  }
+}
+
+function doLnCopy(){
+  if(!lastResult)return;
+  const {amount,rateY,years,monthly,totalRepay,totalInterest}=lastResult;
+  const txt='ローン計算結果\n借入金額：'+amount.toLocaleString()+'円\n年利：'+rateY+'%\n返済期間：'+years+'年\n月々の返済額：'+Math.round(monthly).toLocaleString()+'円\n総返済額：'+Math.round(totalRepay).toLocaleString()+'円\n利息総額：'+Math.round(totalInterest).toLocaleString()+'円';
+  navigator.clipboard.writeText(txt).then(()=>{
+    const b=document.getElementById('lnCopyBtn');b.textContent='コピーしました ✓';b.classList.add('ln-done');
+    setTimeout(()=>{b.textContent='結果をコピー';b.classList.remove('ln-done');},2000);
+  }).catch(() => { /* クリップボードAPIが使えない環境（HTTP等）では動作しません */ });
+}
+function doLnShare(){
+  if(!lastResult)return;
+  const {amount,rateY,years,monthly,totalInterest}=lastResult;
+  const txt=amount.toLocaleString()+'円を年利'+rateY+'%・'+years+'年で借りると月々'+Math.round(monthly).toLocaleString()+'円、利息総額'+Math.round(totalInterest).toLocaleString()+'円になりました。';
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt)+'&url='+encodeURIComponent(window.location.origin+window.location.pathname)+'&hashtags=計算ツール集','_blank','noopener');
+}
+function doLnReset(){
+  ['lnAmount','lnRate'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('lnYears').value='35';
+  document.getElementById('lnType').value='';
+  document.getElementById('lnAmountPrev').textContent='';
+  try{store.removeItem('loan_v1');}catch(e){}
+  recalc();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ㉑ ブラウザ「戻る」(Bfcache)時の再計算
+window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
+</script>
+</body>
+</html>

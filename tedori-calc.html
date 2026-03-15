@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg aria-hidden="true" focusable="false" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>手取り計算ツール | 額面から手取りを無料で即計算 | 計算ツール集</title>
+<meta name="description" content="手取り給与を無料で即計算。手取り＝額面－社会保険料－所得税－住民税。年収・扶養人数・雇用形態を選ぶだけ。年収別手取り早見表・節税アドバイス付き。登録不要・完全無料。">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://yourdomain.com/tedori">
+<meta property="og:title" content="手取り計算ツール | 額面から手取りを無料で即計算">
+<meta property="og:description" content="手取り給与を無料で即計算。所得税・住民税・社会保険料を自動控除。年収別の手取り早見表付き。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/tedori">
+<meta property="og:image" content="https://yourdomain.com/ogp-tedori.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="手取り計算ツール | 額面から手取りを無料で即計算">
+<meta name="twitter:description" content="手取り給与を無料で即計算。所得税・住民税・社会保険料を自動控除。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "計算ツール集",
+      "item": "https://yourdomain.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "手取り計算ツール",
+      "item": "https://yourdomain.com/tedori"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "手取り計算ツール",
+  "url": "https://yourdomain.com/tedori",
+  "description": "手取り給与を無料で計算できるWebツール。所得税・住民税・社会保険料を自動控除。扶養人数別の計算に対応。",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" },
+  "dateModified": "2026-03-15"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "手取りとは何ですか？", "acceptedAnswer": { "@type": "Answer", "text": "手取りとは、額面給与から所得税・住民税・社会保険料（健康保険・厚生年金・雇用保険）を差し引いた実際に受け取る金額のことです。一般的に額面の75〜85%程度が手取りになります。" } },
+    { "@type": "Question", "name": "手取りの計算式は？", "acceptedAnswer": { "@type": "Answer", "text": "手取り = 額面給与 − 社会保険料（健康保険＋厚生年金＋雇用保険）− 所得税 − 住民税 で計算します。社会保険料は給与の約15%、所得税は課税所得に応じた税率（5〜45%）、住民税は課税所得の約10%です。" } },
+    { "@type": "Question", "name": "年収300万円の手取りはいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "年収300万円の手取りは扶養なしで約240〜245万円（月収約20万円）が目安です。社会保険料約45万円、所得税約5万円、住民税約12万円が差し引かれます。" } },
+    { "@type": "Question", "name": "年収500万円の手取りはいくらですか？", "acceptedAnswer": { "@type": "Answer", "text": "年収500万円の手取りは扶養なしで約390〜400万円（月収約33万円）が目安です。社会保険料約75万円、所得税約20万円、住民税約30万円が差し引かれます。" } },
+    { "@type": "Question", "name": "手取りを増やすにはどうすればよいですか？", "acceptedAnswer": { "@type": "Answer", "text": "手取りを増やす主な方法は①iDeCo・企業型DCで所得税・住民税を節税②ふるさと納税で実質税負担を下げる③医療費控除・生命保険料控除を活用する④副業で収入を増やす、です。" } },
+    { "@type": "Question", "name": "このツールは無料で使えますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい、完全無料で使えます。登録不要でご利用いただけます。入力したデータはサーバーに送信されず、すべてブラウザ内で計算します。" } }
+  ]
+}
+</script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif; background: #f4f5f7; min-height: 100vh; padding: 0 0 80px; font-size: 16px; line-height: 1.6; color: #111; }
+
+  .td-nav { background: #fff; border-bottom: 1px solid #e4e4e4; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
+  .td-nav-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; scrollbar-width: none; }
+  .td-nav-inner::-webkit-scrollbar { display: none; }
+  .td-nav-logo { font-size: 13px; font-weight: 800; color: #555; text-decoration: none; white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
+  .td-nav-link { display: flex; align-items: center; height: 48px; padding: 0 12px; font-size: 12px; font-weight: 600; color: #888; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
+  .td-nav-link:hover { color: #444; }
+  .td-nav-link.td-current { color: #444; border-bottom-color: #444; }
+  .td-nav-link.td-disabled { color: #ccc; cursor: default; }
+  .td-badge { font-size: 9px; font-weight: 700; background: #eee; color: #bbb; padding: 1px 5px; border-radius: 4px; margin-left: 4px; }
+
+  .td-wrap { width: 100%; max-width: 720px; margin: 0 auto; padding: 32px 16px 0; }
+  .td-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: #666; margin-bottom: 8px; }
+  .td-title { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 6px; line-height: 1.3; }
+  .td-desc { font-size: 13px; color: #777; margin-bottom: 10px; line-height: 1.6; }
+  .td-secure { display: inline-flex; align-items: center; gap: 6px; background: #f8f8f8; border: 1px solid #e0e0e0; border-radius: 8px; padding: 6px 12px; font-size: 12px; color: #666; font-weight: 600; margin-bottom: 24px; }
+
+  /* 結果カード */
+  .td-result { background: #2c2c2c; border-radius: 20px; padding: 28px 24px; margin-bottom: 20px; transition: background 0.3s; }
+  .td-result.td-rc-on { background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%); }
+  .td-res-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; color: rgba(255,255,255,0.35); margin-bottom: 14px; text-align: center; }
+  .td-num-row { display: flex; align-items: flex-end; justify-content: center; gap: 4px; line-height: 1; margin-bottom: 8px; }
+  .td-num { font-size: 56px; font-weight: 800; color: #fff; letter-spacing: -2px; }
+  .td-unit { font-size: 20px; font-weight: 700; color: rgba(255,255,255,0.6); padding-bottom: 6px; }
+  .td-empty { font-size: 15px; color: rgba(255,255,255,0.2); padding: 20px 0; text-align: center; }
+  .td-rate-row { display: flex; justify-content: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .td-rate-chip { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 8px 14px; text-align: center; }
+  .td-rate-label { font-size: 10px; color: rgba(255,255,255,0.4); margin-bottom: 2px; }
+  .td-rate-val { font-size: 16px; font-weight: 800; color: #fff; }
+  .td-deduct-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+  .td-deduct-item { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 10px 12px; }
+  .td-deduct-label { font-size: 10px; color: rgba(255,255,255,0.35); margin-bottom: 3px; }
+  .td-deduct-val { font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.8); }
+  .td-formula { font-size: 11px; color: rgba(255,255,255,0.2); font-family: monospace; text-align: center; }
+  .td-actions { display: flex; gap: 7px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  .td-btn { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; color: rgba(255,255,255,0.75); font-size: 12px; font-weight: 500; padding: 9px 14px; cursor: pointer; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; min-height: 44px; display: flex; align-items: center; gap: 5px; -webkit-tap-highlight-color: transparent; }
+  .td-btn:hover { background: rgba(255,255,255,0.18); }
+  .td-btn.td-done { background: rgba(255,255,255,0.22); color: #fff; }
+  .td-btn.td-dark { background: rgba(0,0,0,0.3); border-color: rgba(255,255,255,0.1); }
+
+  /* パネル */
+  .td-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; }
+  .td-panel-title { font-size: 12px; font-weight: 700; color: #888; letter-spacing: 0.04em; margin-bottom: 16px; }
+  .td-field { margin-bottom: 18px; }
+  .td-field:last-child { margin-bottom: 0; }
+  .td-field-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .td-field-label { font-size: 13px; font-weight: 700; color: #333; }
+  .td-field-hint { font-size: 11px; color: #bbb; }
+  .td-input-row { display: flex; gap: 8px; align-items: center; }
+  .td-input { flex: 1; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 20px; font-weight: 700; color: #111; outline: none; transition: border-color 0.15s; min-height: 52px; -webkit-appearance: none; background: #fff; }
+  .td-input::-webkit-inner-spin-button, .td-input::-webkit-outer-spin-button { -webkit-appearance: none; }
+  .td-input:focus { border-color: #666; }
+  .td-unit-lbl { font-size: 14px; font-weight: 600; color: #aaa; flex-shrink: 0; }
+  .td-select { width: 100%; border: 1.5px solid #e4e4e4; border-radius: 10px; padding: 12px 14px; font-size: 15px; font-weight: 600; color: #444; background: #f8f8f8; outline: none; cursor: pointer; min-height: 52px; transition: border-color 0.15s; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23999' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+  .td-select:focus { border-color: #666; }
+  .td-preview { font-size: 12px; color: #bbb; margin-top: 5px; min-height: 16px; }
+
+  /* 早見表 */
+  .td-cta { background: #fff; border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; border: 1.5px solid #e4e4e4; display: none; }
+  .td-cta-hd { font-size: 11px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .td-cta-item { display: flex; align-items: flex-start; gap: 14px; padding: 12px 0; border-bottom: 1px solid #f2f2f2; }
+  .td-cta-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .td-cta-ico { width: 40px; height: 40px; border-radius: 10px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .td-cta-body { flex: 1; }
+  .td-cta-name { font-size: 13px; font-weight: 700; color: #111; margin-bottom: 2px; }
+  .td-cta-desc { font-size: 12px; color: #888; line-height: 1.5; margin-bottom: 6px; }
+  .td-cta-link { display: inline-flex; align-items: center; gap: 4px; background: #444; color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; text-decoration: none; transition: background 0.15s; min-height: 36px; }
+  .td-cta-link:hover { background: #222; }
+  .td-cta-foot { font-size: 10px; color: #ccc; margin-top: 10px; text-align: center; }
+  .td-table-panel { background: #fff; border-radius: 14px; padding: 20px 22px; margin-bottom: 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .td-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .td-table th { background: #f4f4f2; padding: 10px 12px; text-align: right; font-weight: 700; color: #555; border-bottom: 2px solid #e8e8e8; }
+  .td-table th:first-child { text-align: left; }
+  .td-table td { padding: 10px 12px; border-bottom: 1px solid #f0f0f0; color: #444; text-align: right; }
+  .td-table td:first-child { text-align: left; font-weight: 600; }
+  .td-table tr:last-child td { border-bottom: none; }
+  .td-table tr.td-highlight td { background: #f0f0ee; font-weight: 700; color: #111; }
+
+  .td-article { background: #fff; border-radius: 14px; padding: 28px; margin-top: 8px; }
+  .td-article h2 { font-size: 18px; font-weight: 700; color: #111; margin: 28px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #f0f0f0; line-height: 1.4; }
+  .td-article h2:first-of-type { margin-top: 0; }
+  .td-article h3 { font-size: 15px; font-weight: 700; color: #333; margin: 20px 0 8px; }
+  .td-article p { font-size: 14px; color: #444; line-height: 1.9; margin-bottom: 14px; }
+  .td-article p:last-child { margin-bottom: 0; }
+  .td-hl { background: #f4f4f4; border-left: 3px solid #666; border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 16px 0; font-size: 14px; color: #333; line-height: 1.8; }
+  .td-related { margin-top: 24px; padding-top: 20px; border-top: 2px solid #f0f0f0; }
+  .td-related-label { font-size: 12px; font-weight: 700; color: #bbb; letter-spacing: 0.04em; margin-bottom: 12px; }
+  .td-related-list { display: flex; flex-direction: column; gap: 8px; }
+  .td-related-link { display: flex; align-items: center; gap: 10px; padding: 12px 14px; background: #f8f8f8; border-radius: 10px; text-decoration: none; color: #333; font-size: 13px; font-weight: 600; transition: background 0.15s; }
+  .td-related-link:hover { background: #f0f0f0; }
+  .td-related-icon { font-size: 16px; flex-shrink: 0; }
+  .td-related-body { flex: 1; }
+  .td-related-sub { font-size: 11px; color: #aaa; font-weight: 400; margin-top: 1px; }
+  .td-footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #e4e4e4; text-align: center; }
+  .td-footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 10px; flex-wrap: wrap; }
+  .td-footer-links a { font-size: 12px; color: #999; text-decoration: none; }
+  .td-footer-links a:hover { color: #444; }
+  .td-footer-copy { font-size: 11px; color: #bbb; }
+  .td-note { font-size: 11px; color: #bbb; text-align: center; line-height: 1.7; margin-top: 14px; }
+  @media (max-width: 600px) { .td-title { font-size: 22px; } .td-num { font-size: 44px; } .td-article { padding: 20px 16px; } .td-deduct-row { grid-template-columns: 1fr 1fr; } }
+
+
+  .td-input::placeholder { color: #aaa; }
+  /* ===== 印刷・PDF保存用スタイル ===== */
+  @media print {
+    .td-nav,
+    footer,
+    .td-cta {
+      display: none !important;
+    }
+    .td-result {
+      background: #fff !important;
+      color: #111 !important;
+      box-shadow: none !important;
+      border: 1px solid #ccc !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .td-result * {
+      color: #111 !important;
+    }
+    body {
+      background: #fff !important;
+    }
+    .td-wrap {
+      max-width: 100% !important;
+      padding: 0 !important;
+    }
+  }
+
+  /* スマホのタップ後hover残りバグ防止 */
+  @media (hover: none) {
+    a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
+  }
+</style>
+<!-- Google Analytics（GA4） ※リリース後にIDを設定 -->
+<!-- 設定方法: G-XXXXXXXXXX をご自身の測定IDに書き換えてコメントを外す -->
+<!--
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:site_name" content="計算ツール集">
+<!-- Google AdSense（審査通過後にコメントを外してIDを設定）-->
+<!--
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+-->
+</head>
+<body>
+<!--
+このページは手取り給与を無料で計算できるツールです。
+額面年収・月収を入力するだけで手取りを即算出。
+所得税・住民税・社会保険料（健康保険・厚生年金・雇用保険）を自動控除。
+扶養人数別・年収別の手取り早見表付き。
+登録不要・完全無料。入力データはサーバーに送信されません。
+最終更新：2026年3月。継続運営中。
+-->
+<nav class="td-nav">
+  <div class="td-nav-inner">
+    <a class="td-nav-logo" href="/">📊 計算ツール集</a>
+    <a class="td-nav-link" href="/cvr">CVR</a>
+    <a class="td-nav-link" href="/cpa">CPA</a>
+    <a class="td-nav-link" href="/roi">ROI</a>
+    <a class="td-nav-link" href="/ltv">LTV</a>
+    <a class="td-nav-link" href="/roas">ROAS</a>
+    <a class="td-nav-link" href="/ctr">CTR</a>
+    <a class="td-nav-link" href="/bep">損益分岐点</a>
+    <a class="td-nav-link td-current" href="/tedori">手取り</a>
+    <a class="td-nav-link" href="/loan">ローン</a>
+    <a class="td-nav-link" href="/bmi">BMI</a>
+  </div>
+</nav>
+
+<div class="td-wrap">
+  <div class="td-eyebrow">無料ツール</div>
+  <h1 class="td-title">手取り計算ツール</h1>
+  <p class="td-desc">額面年収・月収を入力するだけ。所得税・住民税・社会保険料を自動控除して手取りを即計算します。</p>
+  <div class="td-secure">
+    <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5L2 5V9C2 11.2 4.3 13 7 13C9.7 13 12 11.2 12 9V5L7 1.5Z" stroke="#666" stroke-width="1.2" fill="none"/><path d="M5 7L6.5 8.5L9 6" stroke="#666" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    入力したデータはサーバーに送信されません。すべてブラウザ内で計算します。
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-bottom:16px;">※ 当サイトは<a href="/privacy" style="color:#aaa;">アフィリエイト広告</a>を含む場合があります。</p>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <!-- 結果カード -->
+  <div class="td-result" id="tdCard">
+    <div class="td-res-eyebrow">手取り（年収）</div>
+    <div id="tdInner"><div class="td-empty">年収または月収を入力してください</div></div>
+    <div class="td-rate-row" id="tdRateRow" style="display:none;"></div>
+    <div class="td-deduct-row" id="tdDeductRow" style="display:none;"></div>
+    <div class="td-formula" id="tdFormula" style="display:none;">手取り = 額面 − 社会保険料 − 所得税 − 住民税</div>
+    <div class="td-actions" id="tdActions" style="display:none;">
+      <button type="button" class="td-btn" id="tdCopyBtn" onclick="doTdCopy()">結果をコピー</button>
+      <button type="button" class="td-btn td-dark" onclick="doTdShare()">𝕏 でシェア</button>
+      <button type="button" class="td-btn" onclick="doTdReset()">やり直す</button>
+    </div>
+  </div>
+
+  <!-- 入力 -->
+  <div class="td-panel">
+    <div class="td-panel-title">年収または月収を入力</div>
+    <div class="td-field">
+      <div class="td-field-head">
+        <span class="td-field-label">入力方法</span>
+      </div>
+      <select class="td-select" id="tdMode" onchange="saveState();recalc();">
+        <option value="year">年収で入力</option>
+        <option value="month">月収で入力</option>
+      </select>
+    </div>
+    <div class="td-field" id="tdYearField">
+      <div class="td-field-head">
+        <label class="td-field-label" for="tdYearIncome">額面年収</label>
+        <span class="td-field-hint">例：4,000,000</span>
+      </div>
+      <div class="td-input-row">
+        <input type="text" class="td-input" id="tdYearIncome" placeholder="4000000" inputmode="numeric" min="0">
+        <span class="td-unit-lbl">円</span>
+      </div>
+      <div class="td-preview" id="tdYearPrev"></div>
+    </div>
+    <div class="td-field" id="tdMonthField" style="display:none;">
+      <div class="td-field-head">
+        <label class="td-field-label" for="tdMonthIncome">額面月収</label>
+        <span class="td-field-hint">例：300,000</span>
+      </div>
+      <div class="td-input-row">
+        <input type="text" class="td-input" id="tdMonthIncome" placeholder="300000" inputmode="numeric" min="0">
+        <span class="td-unit-lbl">円</span>
+      </div>
+      <div class="td-preview" id="tdMonthPrev"></div>
+    </div>
+    <div class="td-field">
+      <div class="td-field-head">
+        <span class="td-field-label">扶養人数</span>
+        <span class="td-field-hint">配偶者・子供など（所得税に影響）</span>
+      </div>
+      <select class="td-select" id="tdDependents" onchange="saveState();recalc();">
+        <option value="0">扶養なし（0人）</option>
+        <option value="1">1人（配偶者など）</option>
+        <option value="2">2人</option>
+        <option value="3">3人</option>
+        <option value="4">4人以上</option>
+      </select>
+    </div>
+    <div class="td-field">
+      <div class="td-field-head">
+        <span class="td-field-label">雇用形態</span>
+      </div>
+      <select class="td-select" id="tdEmployment" onchange="saveState();recalc();">
+        <option value="regular">正社員・会社員（社会保険あり）</option>
+        <option value="part">パート・アルバイト（社会保険なし目安）</option>
+        <option value="freelance">フリーランス・個人事業主</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- AdSense：ツール下・記事上 -->
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+
+  <!-- アフィリエイトCTA -->
+  <div class="td-cta" id="tdCtaCard">
+    <div class="td-cta-hd">PR・おすすめサービス</div>
+    <div id="tdCtaList"></div>
+    <p class="td-cta-foot">※ 当サイトはアフィリエイト広告を含む場合があります</p>
+  </div>
+
+  <!-- 年収別早見表 -->
+  <div class="td-table-panel">
+    <div class="td-panel-title">📊 年収別 手取り早見表（扶養なし・会社員の目安）</div>
+    <table class="td-table">
+      <tr><th>年収（額面）</th><th>手取り（年）</th><th>手取り（月）</th><th>手取り率</th></tr>
+      <tr id="tr200"><td>200万円</td><td>166万円</td><td>13.8万円</td><td>83%</td></tr>
+      <tr id="tr300"><td>300万円</td><td>242万円</td><td>20.2万円</td><td>81%</td></tr>
+      <tr id="tr400"><td>400万円</td><td>317万円</td><td>26.4万円</td><td>79%</td></tr>
+      <tr id="tr500"><td>500万円</td><td>394万円</td><td>32.8万円</td><td>79%</td></tr>
+      <tr id="tr600"><td>600万円</td><td>468万円</td><td>39.0万円</td><td>78%</td></tr>
+      <tr id="tr700"><td>700万円</td><td>537万円</td><td>44.8万円</td><td>77%</td></tr>
+      <tr id="tr800"><td>800万円</td><td>603万円</td><td>50.3万円</td><td>75%</td></tr>
+      <tr id="tr1000"><td>1,000万円</td><td>729万円</td><td>60.8万円</td><td>73%</td></tr>
+    </table>
+  </div>
+
+  <div class="td-note">※計算結果は概算です。実際の手取りは会社の保険料率・各種控除・住んでいる自治体により異なります。正確な金額は給与明細または税理士にご確認ください。実際の手取りは会社の保険料・各種控除により異なります。確認は給与明細または税理士にご相談ください。</div>
+
+  <div class="td-article">
+    <div style="font-size:11px;color:#bbb;margin-bottom:20px;">最終更新：2026年3月</div>
+    <h2>手取りとは何ですか？</h2>
+    <p>手取りとは、額面給与から所得税・住民税・社会保険料（健康保険・厚生年金・雇用保険）を差し引いた実際に受け取る金額のことです。日本語では「手取り額」「可処分所得」とも呼ばれます。一般的に会社員の手取りは額面の75〜85%程度になります。</p>
+    <div class="td-hl">手取り = 額面給与 − 社会保険料 − 所得税 − 住民税<br>目安：年収の75〜85%が手取り（年収・扶養・雇用形態により変動）</div>
+    <p>たとえば額面年収400万円の会社員（扶養なし）の場合、社会保険料約60万円・所得税約8万円・住民税約18万円が差し引かれ、手取りは約314万円（月約26万円）になります。</p>
+
+    <h2>社会保険料・税金の内訳と計算方法</h2>
+    <h3>社会保険料（給与の約14〜15%）</h3>
+    <p>会社員が毎月天引きされる社会保険料は主に3種類です。健康保険料（標準報酬月額の約9.97%・労使折半なので自己負担約5%）・厚生年金保険料（18.3%・折半で自己負担9.15%）・雇用保険料（1.55%・労働者負担0.6%）です。合計すると給与の約14〜15%が社会保険料として天引きされます。</p>
+    <h3>所得税（累進課税・5〜45%）</h3>
+    <p>所得税は「額面給与 − 給与所得控除 − 基礎控除 − 社会保険料控除 − 扶養控除」で計算した課税所得に対して累進税率が適用されます。年収300〜500万円の会社員（扶養なし）の実効税率は5〜10%程度です。扶養家族が増えると課税所得が減り所得税が下がります。</p>
+    <h3>住民税（課税所得の約10%）</h3>
+    <p>住民税は前年の所得に対して翌年6月から1年間、毎月天引きされます。均等割（年約5,000円）＋所得割（課税所得の約10%）で計算します。新社会人の1年目は前年所得がないため住民税が0円になる場合があり、2年目6月から急に天引きが始まるため注意が必要です。</p>
+
+    <h2>年収別の手取り早見表（会社員・扶養なしの目安）</h2>
+    <p>年収が上がるほど手取り率が下がります。これは高収入ほど所得税の税率が上がる累進課税の仕組みによるものです。年収200万円では手取り率が83%程度ですが、年収1,000万円では73%程度まで下がります。</p>
+
+    <h2>手取りを増やす4つの節税策</h2>
+    <h3>① iDeCo（個人型確定拠出年金）</h3>
+    <p>iDeCoへの掛金は全額が所得控除になり、所得税・住民税が下がります。年収500万円の会社員が毎月2万円（年24万円）積み立てると、年間約4.8万円の節税効果があります（税率20%の場合）。60歳まで引き出せない制約があります。</p>
+    <h3>② ふるさと納税</h3>
+    <p>ふるさと納税は実質2,000円の自己負担で各地の返礼品がもらえ、残りは住民税・所得税の控除になります。年収400万円の会社員（扶養なし）なら約42,000円まで実質負担2,000円で寄付できます。</p>
+    <h3>③ 医療費控除・生命保険料控除</h3>
+    <p>年間10万円を超える医療費は確定申告で医療費控除を申請できます。生命保険料控除（年最大12万円）・地震保険料控除（年最大5万円）も所得控除として活用できます。</p>
+    <h3>④ 副業・フリーランス収入での経費計上</h3>
+    <p>副業収入がある場合、業務に関連する費用（書籍・PC・通信費など）を経費として計上することで課税所得を減らし節税できます。ただし会社員の副業は確定申告が必要です。</p>
+
+    <h2>フリーランス・個人事業主の手取りは？</h2>
+    <p>フリーランスの場合、会社が半分負担してくれる厚生年金・健康保険がなく、国民年金（年約20万円）＋国民健康保険（収入の約8〜10%）を全額自己負担します。同じ年収でも会社員より社会保険料の負担が重くなる傾向があります。その代わり経費計上・青色申告控除（最大65万円）・iDeCoの掛金上限が高い（月6.8万円）などの節税メリットがあります。</p>
+    <div class="td-related">
+      <div class="td-related-label">関連ツール</div>
+      <div class="td-related-list">
+        <a class="td-related-link" href="/bep"><span class="td-related-icon">📊</span><div class="td-related-body"><div>損益分岐点計算ツール</div><div class="td-related-sub">事業の黒字化に必要な売上を計算。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="td-related-link" href="/cpa"><span class="td-related-icon">💰</span><div class="td-related-body"><div>CPA計算ツール</div><div class="td-related-sub">顧客獲得単価を即計算。マーケター向け。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+        <a class="td-related-link" href="/ltv"><span class="td-related-icon">🔄</span><div class="td-related-body"><div>LTV計算ツール</div><div class="td-related-sub">顧客生涯価値を計算して適正CPAを逆算。</div></div><span style="color:#bbb;font-size:16px;">›</span></a>
+      </div>
+    </div>
+  </div>
+  <!-- <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX" data-ad-format="auto" data-full-width-responsive="true"></ins> -->
+  <!--
+  ===== リリース前チェックリスト =====
+  □ og:url / og:image を実際のドメインに変更
+  □ WebApplicationスキーマの"url"を変更
+  □ AdSenseのコメントを外してIDを変更（審査通過後）
+  ======================================
+  -->
+  <footer class="td-footer">
+    <div class="td-footer-links"><a href="/about">このサイトについて</a><a href="/contact">お問い合わせ</a><a href="/privacy">プライバシーポリシー</a></div>
+    <div class="td-footer-copy">© 2026 計算ツール集</div>
+  </footer>
+</div>
+
+<script>
+const store = (() => {
+  try { localStorage.setItem('__td__','1'); localStorage.removeItem('__td__'); return localStorage; }
+  catch(e) { const m={}; return { getItem:k=>m[k]??null, setItem:(k,v)=>{m[k]=String(v);}, removeItem:k=>{delete m[k];} }; }
+})();
+
+let lastResult = null;
+
+document.getElementById('tdMode').addEventListener('change',function(){
+  const isYear=this.value==='year';
+  document.getElementById('tdYearField').style.display=isYear?'':'none';
+  document.getElementById('tdMonthField').style.display=isYear?'none':'';
+  saveState(); recalc();
+});
+
+['tdYearIncome','tdMonthIncome'].forEach(id=>{
+  const el=document.getElementById(id);
+  function tdProcess(){el.value=el.value.replace(/[^0-9]/g,''); updatePrev(); saveState(); recalc();}
+  el.addEventListener('input', tdProcess);
+  el.addEventListener('blur',  tdProcess);
+});
+
+function updatePrev(){
+  const y=parseFloat(document.getElementById('tdYearIncome').value);
+  const m=parseFloat(document.getElementById('tdMonthIncome').value);
+  document.getElementById('tdYearPrev').textContent=!isNaN(y)&&y>0?y.toLocaleString()+' 円':'';
+  document.getElementById('tdMonthPrev').textContent=!isNaN(m)&&m>0?m.toLocaleString()+' 円':'';
+}
+
+function saveState(){
+  try{store.setItem('tedori_v1',JSON.stringify({
+    mode:document.getElementById('tdMode').value,
+    year:document.getElementById('tdYearIncome').value,
+    month:document.getElementById('tdMonthIncome').value,
+    dep:document.getElementById('tdDependents').value,
+    emp:document.getElementById('tdEmployment').value
+  }));}catch(e){}
+}
+(function restore(){
+  try{
+    const raw=store.getItem('tedori_v1');if(!raw)return;
+    const d=JSON.parse(raw);
+    if(d.mode){document.getElementById('tdMode').value=d.mode;document.getElementById('tdMode').dispatchEvent(new Event('change'));}
+    if(d.year)document.getElementById('tdYearIncome').value=d.year;
+    if(d.month)document.getElementById('tdMonthIncome').value=d.month;
+    if(d.dep)document.getElementById('tdDependents').value=d.dep;
+    if(d.emp)document.getElementById('tdEmployment').value=d.emp;
+    updatePrev(); recalc();
+  }catch(e){}
+})();
+
+// 手取り概算計算（2026年度の目安）
+function calcTedori(yearIncome, dependents, employment){
+  // 社会保険料
+  let socialRate = 0;
+  if(employment==='regular'){
+    socialRate = 0.1495; // 健保4.985%+厚年9.15%+雇保0.6% (概算・2026年目安)
+  } else if(employment==='part'){
+    socialRate = 0.006; // 雇用保険のみ目安
+  } else { // freelance
+    socialRate = 0.20; // 国保+国民年金目安
+  }
+  const socialInsurance = Math.round(yearIncome * socialRate);
+
+  // 給与所得控除（2026年現行制度目安）
+  let deduction = 0;
+  if(yearIncome <= 1625000) deduction = 550000;
+  else if(yearIncome <= 1800000) deduction = Math.round(yearIncome * 0.4) - 100000;
+  else if(yearIncome <= 3600000) deduction = Math.round(yearIncome * 0.3) + 80000;
+  else if(yearIncome <= 6600000) deduction = Math.round(yearIncome * 0.2) + 440000;
+  else if(yearIncome <= 8500000) deduction = Math.round(yearIncome * 0.1) + 1100000;
+  else deduction = 1950000;
+
+  // 基礎控除
+  const basicDeduction = yearIncome <= 24000000 ? 480000 : 0;
+  // 扶養控除
+  const dependentDeduction = dependents > 0 ? dependents * 380000 : 0;
+  // 社会保険料控除
+  const taxableIncome = Math.max(0, yearIncome - socialInsurance - deduction - basicDeduction - dependentDeduction);
+
+  // 所得税（累進課税・概算）
+  let incomeTax = 0;
+  if(taxableIncome <= 1950000) incomeTax = Math.round(taxableIncome * 0.05);
+  else if(taxableIncome <= 3300000) incomeTax = Math.round(97500 + (taxableIncome-1950000)*0.10);
+  else if(taxableIncome <= 6950000) incomeTax = Math.round(232500 + (taxableIncome-3300000)*0.20);
+  else if(taxableIncome <= 9000000) incomeTax = Math.round(962500 + (taxableIncome-6950000)*0.23);
+  else if(taxableIncome <= 18000000) incomeTax = Math.round(1434000 + (taxableIncome-9000000)*0.33);
+  else if(taxableIncome <= 40000000) incomeTax = Math.round(4404000 + (taxableIncome-18000000)*0.40);
+  else incomeTax = Math.round(13204000 + (taxableIncome-40000000)*0.45);
+  // 復興特別所得税2.1%
+  incomeTax = Math.round(incomeTax * 1.021);
+
+  // 住民税（課税所得の10%＋均等割5000円目安）
+  const residentTax = Math.round(taxableIncome * 0.10) + 5000;
+
+  const tedori = yearIncome - socialInsurance - incomeTax - residentTax;
+  return { tedori, socialInsurance, incomeTax, residentTax, taxableIncome };
+}
+
+function recalc(){
+  const mode=document.getElementById('tdMode').value;
+  let yearIncome;
+  if(mode==='year'){
+    yearIncome=parseFloat(document.getElementById('tdYearIncome').value);
+  } else {
+    const m=parseFloat(document.getElementById('tdMonthIncome').value);
+    yearIncome=m*12;
+  }
+  const dep=parseInt(document.getElementById('tdDependents').value)||0;
+  const emp=document.getElementById('tdEmployment').value;
+
+  const card=document.getElementById('tdCard');
+  if(isNaN(yearIncome)||yearIncome<=0){
+    lastResult=null;
+    card.className='td-result';
+    document.getElementById('tdInner').innerHTML='<div class="td-empty">年収または月収を入力してください</div>';
+    ['tdRateRow','tdDeductRow','tdFormula','tdActions'].forEach(id=>document.getElementById(id).style.display='none');
+    return;
+  }
+
+  const r=calcTedori(yearIncome,dep,emp);
+  lastResult={yearIncome,r};
+  const rate=(r.tedori/yearIncome*100).toFixed(1);
+
+  card.className='td-result td-rc-on';
+  document.getElementById('tdInner').innerHTML=
+    '<div class="td-num-row"><span class="td-num">'+Math.round(r.tedori/10000)+'</span><span class="td-unit">万円/年</span></div>'+
+    '<div style="font-size:13px;color:rgba(255,255,255,0.5);text-align:center;margin-bottom:8px;">月収換算 約 <strong style="color:#fff;font-size:16px;">'+Math.round(r.tedori/12/10000)+'万円</strong>/月</div>';
+
+  const rr=document.getElementById('tdRateRow');
+  rr.style.display='flex';
+  rr.innerHTML='<div class="td-rate-chip"><div class="td-rate-label">手取り率</div><div class="td-rate-val">'+rate+'%</div></div>'+
+    '<div class="td-rate-chip"><div class="td-rate-label">控除合計</div><div class="td-rate-val">'+Math.round((yearIncome-r.tedori)/10000)+'万円</div></div>';
+
+  const dr=document.getElementById('tdDeductRow');
+  dr.style.display='grid';
+  dr.innerHTML=
+    '<div class="td-deduct-item"><div class="td-deduct-label">社会保険料</div><div class="td-deduct-val">'+Math.round(r.socialInsurance/10000)+'万円</div></div>'+
+    '<div class="td-deduct-item"><div class="td-deduct-label">所得税</div><div class="td-deduct-val">'+Math.round(r.incomeTax/10000)+'万円</div></div>'+
+    '<div class="td-deduct-item"><div class="td-deduct-label">住民税</div><div class="td-deduct-val">'+Math.round(r.residentTax/10000)+'万円</div></div>'+
+    '<div class="td-deduct-item"><div class="td-deduct-label">額面年収</div><div class="td-deduct-val">'+Math.round(yearIncome/10000)+'万円</div></div>';
+
+
+  // アフィリエイトCTA（手取り率に応じて表示）
+  const tdCta = document.getElementById('tdCtaCard');
+  const tedoriRate = r.tedori / yearIncome;
+  let tdCtaItems;
+  if(emp === 'freelance'){
+    tdCtaItems = [
+      {i:'💰',n:'フリーランス向け節税サービス',d:'iDeCoや青色申告の活用で手取りを大幅アップ。税理士への無料相談も可能。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料相談する'},
+      {i:'📋',n:'確定申告を簡単にするクラウド会計',d:'フリーランスの確定申告を自動化。経費管理・請求書発行も一括対応。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で試す'}
+    ];
+  } else if(tedoriRate < 0.78){
+    tdCtaItems = [
+      {i:'💎',n:'iDeCoで所得税・住民税を節税',d:'掛金が全額所得控除になり手取りが増えます。年収500万なら年4〜5万円の節税効果も。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る'},
+      {i:'🏘️',n:'ふるさと納税で実質2,000円節税',d:'住民税控除を活用して返礼品をもらう。年収別の控除上限額はシミュレーターで確認。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料シミュレーション'}
+    ];
+  } else {
+    tdCtaItems = [
+      {i:'📈',n:'収入を増やす副業・転職を検討',d:'手取りを増やす最短は収入アップ。転職サービスへの登録は無料で年収交渉のプロに相談できます。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'無料で相談する'},
+      {i:'💎',n:'iDeCoで節税しながら老後資産を作る',d:'所得控除で節税しながら老後資金を積み立て。掛金は全額所得控除対象。',u:'#' /* TODO: アフィリエイトリンクをA8.net等で取得後に設定 */,l:'詳しく見る'}
+    ];
+  }
+  tdCta.style.display = 'block';
+  document.getElementById('tdCtaList').innerHTML = tdCtaItems.map(x=>
+    '<div class="td-cta-item"><div class="td-cta-ico">'+x.i+'</div><div class="td-cta-body"><div class="td-cta-name">'+x.n+'</div><div class="td-cta-desc">'+x.d+'</div><a class="td-cta-link" href="'+x.u+'" target="_blank" rel="noopener sponsored">'+x.l+' →</a></div></div>'
+  ).join('');
+
+  ['tdFormula','tdActions'].forEach(id=>document.getElementById(id).style.display='');
+
+  // 早見表のハイライト
+  document.querySelectorAll('.td-table tr[id]').forEach(tr=>tr.classList.remove('td-highlight'));
+  const brackets=[200,300,400,500,600,700,800,1000];
+  const w=yearIncome/10000;
+  let closest=brackets.reduce((a,b)=>Math.abs(b-w)<Math.abs(a-w)?b:a);
+  const hlRow=document.getElementById('tr'+closest);
+  if(hlRow)hlRow.classList.add('td-highlight');
+}
+
+function doTdCopy(){
+  if(!lastResult)return;
+  const {yearIncome,r}=lastResult;
+  const rate=(r.tedori/yearIncome*100).toFixed(1);
+  const txt='手取り計算結果\n額面年収：'+Math.round(yearIncome/10000)+'万円\n手取り年収：'+Math.round(r.tedori/10000)+'万円（月'+Math.round(r.tedori/12/10000)+'万円）\n手取り率：'+rate+'%\n社会保険料：'+Math.round(r.socialInsurance/10000)+'万円\n所得税：'+Math.round(r.incomeTax/10000)+'万円\n住民税：'+Math.round(r.residentTax/10000)+'万円';
+  navigator.clipboard.writeText(txt).then(()=>{
+    const b=document.getElementById('tdCopyBtn');b.textContent='コピーしました ✓';b.classList.add('td-done');
+    setTimeout(()=>{b.textContent='結果をコピー';b.classList.remove('td-done');},2000);
+  }).catch(() => { /* クリップボードAPIが使えない環境（HTTP等）では動作しません */ });
+}
+function doTdShare(){
+  if(!lastResult)return;
+  const {yearIncome,r}=lastResult;
+  const rate=(r.tedori/yearIncome*100).toFixed(1);
+  const txt='年収'+Math.round(yearIncome/10000)+'万円の手取りは約'+Math.round(r.tedori/10000)+'万円（手取り率'+rate+'%）でした。';
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt)+'&url='+encodeURIComponent(window.location.origin+window.location.pathname)+'&hashtags=計算ツール集','_blank','noopener');
+}
+function doTdReset(){
+  document.getElementById('tdYearIncome').value='';
+  document.getElementById('tdMonthIncome').value='';
+  document.getElementById('tdDependents').value='0';
+  document.getElementById('tdEmployment').value='regular';
+  document.getElementById('tdMode').value='year';
+  document.getElementById('tdYearField').style.display='';
+  document.getElementById('tdMonthField').style.display='none';
+  ['tdYearPrev','tdMonthPrev'].forEach(id=>document.getElementById(id).textContent='');
+  document.querySelectorAll('.td-table tr[id]').forEach(tr=>tr.classList.remove('td-highlight'));
+  try{store.removeItem('tedori_v1');}catch(e){}
+  recalc();window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ㉑ ブラウザ「戻る」(Bfcache)時の再計算
+window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
+</script>
+</body>
+</html>
