@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/cvr",    "destination": "/index.html" },
+    { "source": "/cvr",    "destination": "/cvr-final.html" },
     { "source": "/cpa",    "destination": "/cpa-calc.html" },
     { "source": "/roi",    "destination": "/roi-calc.html" },
     { "source": "/ltv",    "destination": "/ltv-calc.html" },

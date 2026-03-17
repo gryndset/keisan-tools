@@ -1052,6 +1052,7 @@ window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
   }
   inner.addEventListener('scroll', update, {passive: true});
   update();
+  setTimeout(update, 150);
 })();
 </script>
 </body>
