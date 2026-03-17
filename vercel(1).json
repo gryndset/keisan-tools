@@ -1,0 +1,17 @@
+{
+  "rewrites": [
+    { "source": "/cvr",    "destination": "/cvr-final.html" },
+    { "source": "/cpa",    "destination": "/cpa-calc.html" },
+    { "source": "/roi",    "destination": "/roi-calc.html" },
+    { "source": "/ltv",    "destination": "/ltv-calc.html" },
+    { "source": "/roas",   "destination": "/roas-calc.html" },
+    { "source": "/ctr",    "destination": "/ctr-calc.html" },
+    { "source": "/bep",    "destination": "/bep-calc.html" },
+    { "source": "/tedori", "destination": "/tedori-calc.html" },
+    { "source": "/loan",   "destination": "/loan-calc.html" },
+    { "source": "/bmi",    "destination": "/bmi-calc.html" },
+    { "source": "/about",  "destination": "/about.html" },
+    { "source": "/contact","destination": "/contact.html" },
+    { "source": "/privacy","destination": "/privacy.html" }
+  ]
+}
