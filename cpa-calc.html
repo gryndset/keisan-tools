@@ -150,7 +150,7 @@
 
   /* ── ナビ ── */
   .g-nav { background: #fff; border-bottom: 1px solid #e4e8e4; padding: 0 16px; position: sticky; top: 0; z-index: 100; }
-  .g-nav-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; scrollbar-width: none; }
+  .g-nav-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; height: 48px; overflow-x: auto; padding-right: 32px; scrollbar-width: none; }
   .g-nav-inner::-webkit-scrollbar { display: none; }
   .g-nav-logo { font-size: 13px; font-weight: 800; color: #00b894; text-decoration: none; white-space: nowrap; margin-right: 20px; flex-shrink: 0; }
   .g-nav-link { display: flex; align-items: center; height: 48px; padding: 0 14px; font-size: 12px; font-weight: 600; color: #999; text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.15s; flex-shrink: 0; -webkit-tap-highlight-color: transparent; }
@@ -386,6 +386,32 @@
   @media (hover: none) {
     a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
   }
+
+  /* ── ナビpeek（右端グラデーション） ── */
+  .g-nav { position: relative; }
+  .g-nav::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 56px; height: 100%;
+    background: linear-gradient(to right, transparent, #fff);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ── ナビ scroll arrow ── */
+  .g-nav-arrow {
+    position: absolute;
+    top: 0; right: 0;
+    width: 44px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.25s;
+  }
+  .g-nav-arrow.hidden { opacity: 0; }
+  .g-nav-arrow svg { display: block; }
 </style>
 <!-- Google Analytics（GA4） ※リリース後にIDを設定 -->
 <!-- 設定方法: G-XXXXXXXXXX をご自身の測定IDに書き換えてコメントを外す -->
@@ -431,6 +457,7 @@ Google広告・Meta広告・リスティング広告運用者向け。
     <a class="g-nav-link" href="/loan">ローン</a>
     <a class="g-nav-link" href="/bmi">BMI</a>
   </div>
+  <div class="g-nav-arrow" id="g-navArrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="9" fill="rgba(0,0,0,0.07)"/><path d="M7.5 5.5L11 9L7.5 12.5" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 </nav>
 
 <div class="g-wrap">
@@ -1034,6 +1061,19 @@ Google広告・Meta広告・リスティング広告運用者向け。
 
 // ㉑ ブラウザ「戻る」(Bfcache)時の再計算
 window.addEventListener('pageshow', function(e){ if(e.persisted) recalc(); });
+</script>
+<script>
+(function(){
+  var inner = document.querySelector('.g-nav-inner');
+  var arrow = document.getElementById('g-navArrow');
+  if (!inner || !arrow) return;
+  function update() {
+    var atEnd = inner.scrollLeft + inner.clientWidth >= inner.scrollWidth - 4;
+    arrow.classList.toggle('hidden', atEnd);
+  }
+  inner.addEventListener('scroll', update, {passive: true});
+  update();
+})();
 </script>
 </body>
 </html>
