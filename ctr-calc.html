@@ -268,29 +268,32 @@
     a:hover, button:hover, [role="button"]:hover { background: revert; color: revert; border-color: revert; }
   }
 
-  /* ── ナビpeek（右端グラデーション） ── */
+    /* ── ナビpeek（右端グラデーション） ── */
   .ct-nav { position: relative; }
   .ct-nav::after {
     content: '';
     position: absolute;
     top: 0; right: 0;
-    width: 56px; height: 100%;
-    background: linear-gradient(to right, transparent, #fff);
+    width: 64px; height: 100%;
+    background: linear-gradient(to right, transparent, #fff 80%);
     pointer-events: none;
     z-index: 1;
   }
-
   /* ── ナビ scroll arrow ── */
   .ct-nav-arrow {
     position: absolute;
-    top: 0; right: 0;
-    width: 44px; height: 48px;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 28px; height: 28px;
     display: flex; align-items: center; justify-content: center;
     pointer-events: none;
     z-index: 2;
     opacity: 1;
     transition: opacity 0.25s;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.15));
   }
+  .ct-nav-arrow.hidden { opacity: 0; }
   .ct-nav-arrow.hidden { opacity: 0; }
   .ct-nav-arrow svg { display: block; }
 </style>
@@ -336,7 +339,7 @@
     <a class="ct-nav-link" href="/loan">ローン</a>
     <a class="ct-nav-link" href="/bmi">BMI</a>
   </div>
-  <div class="ct-nav-arrow" id="ct-navArrow"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="9" fill="rgba(0,0,0,0.07)"/><path d="M7.5 5.5L11 9L7.5 12.5" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+  <div class="ct-nav-arrow" id="ct-navArrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="#4f7fff"/><path d="M8.5 6L12.5 10L8.5 14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 </nav>
 
 <div class="ct-wrap">
